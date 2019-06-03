@@ -1,0 +1,165 @@
+body {
+  background-color: #f5f5f5;
+}
+.redactive {
+  background-color: #D61705;
+}
+.redactive>a {
+  color: white!important;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  min-width: 1210px;
+}
+.container .breadcrumb > li + li:before {
+  content: '';
+}
+.container .breadcrumb a {
+  color: #212121;
+}
+.container .g-classlist {
+  font-size: 16px;
+  height: 50px;
+  width: 100%;
+  /*background-color: #fff;*/
+  margin: 20px 0;
+  padding-left: 30px;
+  min-width: 1110px;
+}
+
+.container .g-classlist > div {
+  width: 75px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.container .g-classlist > li {
+  width: 75px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.container .g-classlist li a:hover {
+  background-color: #D61705;
+  color: white!important;
+}
+
+.container .g-classlist li a {
+  color: #212121;
+  width: 75px;
+  height: 50px;
+  display: block;
+}
+.container .banner {
+  width: 1140px;
+  height: 350px;
+  background-color: #fff;
+  display: inline-block;
+}
+.container .banner h3 {
+  padding: 25px 0 0 20px;
+  color: #A31103;
+}
+.container .banner .rvc .rvc-wrapper ul {
+  width: 100%;
+  height: 245px;
+}
+.container .banner .rvc .rvc-wrapper ul li {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 7px;
+}
+.container .banner .rvc .rvc-wrapper ul li a .img-wrapper {
+  width: 100%;
+  height: 210px;
+  border: 1px solid #EBEBEB;
+  position: relative;
+}
+.container .banner .rvc .rvc-wrapper ul li a .img-wrapper span {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 64px;
+  height: 64px;
+  background-image: url("  拷贝.png")/*tpa=http://www.hcwc.top/r/cms/www/custom/images/VIP/ 拷贝.png*/;
+}
+.container .banner .rvc .rvc-wrapper ul li a .img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+.container .banner .rvc .rvc-wrapper ul li a p {
+  color: #000;
+  text-align: center;
+  margin-top: 10px;
+  height: 20px;
+  padding: 0;
+}
+.container .banner .rvc .rvc-prv,
+.container .banner .rvc .rvc-next {
+  width: 30px;
+  height: 70px;
+  background-color: #000;
+  top: 75px;
+}
+.container .banner .rvc .rvc-prv {
+  left: -15px;
+}
+.container .banner .rvc .rvc-next {
+  right: -15px;
+}
+.container .row {
+  margin-top: 30px;
+  min-width: 1210px;
+}
+.container .row .g-imglist {
+  width: 300px;
+  height: 350px;
+}
+.container .row .g-imglist .thumbnail {
+  padding: 0px;
+  border: 0px solid #ddd;
+}
+.container .row .g-imglist .thumbnail a img {
+  width: 280px;
+  height: 210px;
+}
+.container .row .g-imglist .thumbnail .caption {
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  line-height: 20px;
+}
+.container .row .g-imglist .thumbnail .caption h3 {
+  font-size: 16px;
+  padding: 10px 0;
+}
+.container .row .g-imglist .thumbnail .caption p {
+  color: #D61705;
+  font-size: 16px;
+}
+.container .row .g-imglist .thumbnail .g-teb {
+  display: flex;
+  justify-content: space-between;
+}
+.container .row .g-imglist .thumbnail .g-teb .g-teb-a1 {
+  margin-top: 10px;
+  color: #AFAFAF;
+}
+.container .row .g-imglist .thumbnail .g-teb .g-teb-a2 {
+  width: 100px;
+  height: 30px;
+  background-color: #D61705;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.container .g-page {
+  text-align: center;
+}

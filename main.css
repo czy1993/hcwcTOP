@@ -1,0 +1,161 @@
+.zhuang {
+    margin-top: 50px;
+}
+
+.item {
+    margin-top: 50px;
+}
+
+.panter {
+    margin-top: 50px;
+}
+
+.gui {
+    width: 100%;
+    height: 350px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gui>div {
+    width: 34%;
+    height: 350px;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+}
+
+.hi {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    /*left:-350px;*/
+    top:0;
+   /* animation-duration: 2s;
+    animation-fill-mode: forwards;*/
+}
+
+@keyframes rt {
+    from {
+        margin-top: 350px;
+    }
+
+    to {
+        margin-top: 0px;
+    }
+}
+
+@keyframes lt {
+    from {
+        margin-top: 0px;
+    }
+
+    to {
+        margin-top: 350px;
+    }
+}
+
+.hi>div {
+    color: #fff;
+    margin: 0px 5% 0 5%;
+    width: 90%;
+    padding-top: 5px;
+    line-height: 24px;
+}
+
+.look {
+    width: 60%;
+    height: 30px;
+    margin: 30px 20%;
+    background-color: #b29164;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.boy {
+    font-size: 16px;
+    padding-top: 40px !important;
+}
+
+.yes {
+    padding-top: 20px !important;
+}
+
+.so {
+    background-image: url("30.png")/*tpa=http://www.hcwc.top/r/cms/www/custom/images/30.png*/;
+    width: 100%;
+    height: 500px;
+    background-size: 100% 620px;
+    margin-top: 30px;
+    rginbackground-repeat: no-repeat;
+    background-position: center;
+}
+
+.gee {
+    text-align: center;
+    line-height: 80px;
+    color: #b29164;
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.bits {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    justify-content: space-between;
+}
+
+.bits>div {
+    width: 19%;
+    height: 100%;
+}
+
+.bibi {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid #b29164;
+    margin: 20px auto;
+    display: inherit;
+}
+
+.jks {
+    text-align: center;
+    font-size: 16px;
+}
+
+.jk {
+    text-align: center;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    width: 90%;
+    margin: 5px 5%;
+    color: #999999;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.no {
+    display: inline-block;
+    margin-top: 10px;
+    width: 130px;
+    margin-left: calc(50% - 65px);
+}
+.happy{width: 100%;height: 110px;display: flex;justify-content: space-between;margin-top: 30px;}
+.happy>a{width: 16%;height: 100%;}
+.happy>a>img{
+	width: 100%;height: 100%;
+}
+.dropdown-menu{
+    top: 130%;
+}

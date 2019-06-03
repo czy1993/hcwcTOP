@@ -1,0 +1,401 @@
+<!DOCTYPE HTML>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="keywords" content="">
+<link rel="icon" type="image/x-ico" href="..\r\cms\favicon.ico">
+<meta http-equiv="description" content="">
+<title>VIP专场 - 汇诚文藏网</title>
+<script src="front.js" tppabs="http://www.hcwc.top/r/cms/front.js" type="text/javascript"></script>
+<link href="bootstrap1.min.css" tppabs="http://www.hcwc.top/r/cms/www/custom/css/bootstrap1.min.css" rel="stylesheet">
+<!--引入公共样式文件--字体图标-->
+<link rel="stylesheet" href="base.css" tppabs="http://www.hcwc.top/r/cms/www/custom/css/base.css">
+<link rel="stylesheet" href="bootstrap1.css" tppabs="http://www.hcwc.top/r/cms/www/custom/css/bootstrap1.css">
+<!--引入当前页面的样式文件-->
+<link rel="stylesheet" href="exhibition.css" tppabs="http://www.hcwc.top/r/cms/www/custom/css/exhibition.css">
+<script src="jquery-2.1.4.min.js" tppabs="http://www.hcwc.top/r/cms/www/custom/js/jquery-2.1.4.min.js"></script>
+<script src="bootstrap.min.js" tppabs="http://www.hcwc.top/r/cms/www/custom/js/bootstrap.min.js"></script>
+<script src="exhibition.js" tppabs="http://www.hcwc.top/r/cms/www/custom/js/exhibition.js"></script>
+<script type="text/javascript">$(function () {
+        Cms.channelViewCount("", "170");
+    });</script>
+<head>
+    <body>
+        <link rel="stylesheet" href="iconfont.css" tppabs="http://www.hcwc.top/r/cms/www/custom/font_m6tuq8fjihn/iconfont.css">
+        <link type="text/css" rel="stylesheet" href="common_index.css" tppabs="http://www.hcwc.top/r/cms/www/custom/css/common_index.css">
+        <script type="text/javascript">
+            function qkeypress() {
+                var q = $("input[name=q]");
+                if (q.val().trim() != "") {
+                    $("input[name=q]").autocomplete("enable");
+                } else {
+                    $("input[name=q]").autocomplete("disable");
+                }
+            }
+            function query() {
+                event.preventDefault();
+                $.ajax({
+                    url: "http://www.hcwc.top/createToken.jspx", async: false, dataType: "json", success: function (data) {
+                        $("#token").val(data.token);
+                    }
+                });
+                if ($("#token").val() != null && $("#token").val() != '' && $("input[name='q']").val() != '') {
+                    $("#searchForm").submit();
+                }
+
+            }
+            $(function () {
+                $("input[name='q']").bind('keypress', function (event) {
+                    if (event.keyCode == 13) {
+                        event.preventDefault();
+                        query();
+                    }
+                });
+            });</script>
+        <div class="hlep_header">
+            <div class="w">
+                <a class="bl_logo" href="Home.html" tppabs="http://www.hcwc.top/Home" style="height: 50px;">
+                    <img src="logo-red.png" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/logo-red.png" alt="" style="height: 50px;">
+                </a>
+                <ul class="bm_ul01">
+                    <li><a href="Home.html" tppabs="http://www.hcwc.top/Home" class="normalchannel">首页</a></li>
+                    <li><a href="zxzx.html" tppabs="http://www.hcwc.top/zxzx" class="normalchannel">展览展销</a></li>
+                    <li><a href="spzx.html" tppabs="http://www.hcwc.top/spzx" class="normalchannel">视频展销</a></li>
+                    <li><a href="VIP.html" tppabs="http://www.hcwc.top/VIP" class="normalchannel">VIP专场</a></li>
+                    <li><a href="about.html" tppabs="http://www.hcwc.top/sczs/about" class="normalchannel">关于我们</a></li>
+                </ul>
+                <ul class="bm_ul02">
+                    <li>
+                        <span class="iconfont icon-dianhua"></span>
+                        <span>027-84887654</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--<div class="zj_bz02">-->
+        <!--<div class="w">-->
+        <!--<ul class="bl_lop">-->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!--&lt;!&ndash;<li>&ndash;&gt;-->
+        <!--&lt;!&ndash;<a href="http://www.asblys.com/zlzx/index.jhtml?status=1">展销中</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;<img src="/r/cms/www/custom/images/Chinese knotting.png" alt="" />&ndash;&gt;-->
+        <!--&lt;!&ndash;</li>&ndash;&gt;-->
+        <!--&lt;!&ndash;<li>&ndash;&gt;-->
+        <!--&lt;!&ndash;<a href="http://www.asblys.com/zlzx/index.jhtml?status=2">已成交</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;</li>&ndash;&gt;-->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<script src="/r/cms/www/custom/js/jquery-1.8.3.min.js"></script>-->
+        <script src="rent_out.js" tppabs="http://www.hcwc.top/r/cms/www/custom/js/rent_out.js"></script><div class="bl_box">
+            <img src="14162154w3km.png" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/u/cms/www/201903/14162154w3km.png" alt="">
+        </div>
+        
+
+<div class="bread-nav w" id="index">
+    <ol class="breadcrumb">
+        专场展厅 &gt; VIP专场
+    </ol>
+</div>
+<div class="goods-container w">
+    <ul>
+        <li class="goods-item">
+            <div class="img-wrap">
+                <a href="#">
+                    <img src="30103017yfbg.jpeg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/u/cms/www/201903/30103017yfbg.jpeg" alt="">
+                </a>
+                <img src="vip.png" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/vip.png" alt="" class="vip-img">
+                <img src="vip-1.gif" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+            </div>
+            <div class="goods-info">
+                <h1 class="title">精美瓷器专场</h1>
+                <p class="time">
+                    距离结束：
+                    <input type="hidden" value="2019-03-26 00:00:00">
+                    <span>0</span>天
+                    <span>0</span>时
+                    <span>0</span>分
+                    <span>0</span>秒
+                </p>
+                <div class="hoting">
+                    <div>
+                        <p id="statusvalue">已结束</p>
+                        <span>16915</span><span>次围观</span>
+                    </div>
+                    <a href="#">VIP精品买家火热招商中</a>
+                </div>
+            </div>
+        </li>
+        <li class="goods-item">
+            <div class="img-wrap">
+                <a href="#">
+                    <img src="30103218oubi.jpeg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/u/cms/www/201903/30103218oubi.jpeg" alt="">
+                </a>
+                <img src="vip.png" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/vip.png" alt="" class="vip-img">
+                <img src="vip-1.gif" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+            </div>
+            <div class="goods-info">
+                <h1 class="title">中国书法专场</h1>
+                <p class="time">
+                    距离结束：
+                    <input type="hidden" value="2019-03-26 17:26:28">
+                    <span>0</span>天
+                    <span>0</span>时
+                    <span>0</span>分
+                    <span>0</span>秒
+                </p>
+                <div class="hoting">
+                    <div>
+                        <p id="statusvalue">已结束</p>
+                        <span>68500</span><span>次围观</span>
+                    </div>
+                    <a href="#">VIP精品买家火热招商中</a>
+                </div>
+            </div>
+        </li>
+        <li class="goods-item">
+            <div class="img-wrap">
+                <a href="#">
+                    <img src="30103305e388.jpeg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/u/cms/www/201903/30103305e388.jpeg" alt="">
+                </a>
+                <img src="vip.png" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/vip.png" alt="" class="vip-img">
+                <img src="vip-1.gif" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+            </div>
+            <div class="goods-info">
+                <h1 class="title">精品杂项专区</h1>
+                <p class="time">
+                    距离结束：
+                    <input type="hidden" value="2019-05-25 00:00:00">
+                    <span>0</span>天
+                    <span>0</span>时
+                    <span>0</span>分
+                    <span>0</span>秒
+                </p>
+                <div class="hoting">
+                    <div>
+                        <p id="statusvalue">已结束</p>
+                        <span>248451</span><span>次围观</span>
+                    </div>
+                    <a href="#">VIP精品买家火热招商中</a>
+                </div>
+            </div>
+        </li>
+        <style>
+
+            .cons_box2 {
+                position: absolute;
+                bottom: 30px;
+                left: 237px;
+                margin: 0 auto;
+            }
+
+            .my_page {
+                text-align: center;
+            }
+
+                .my_page a {
+                    float: left;
+                    margin: 0 5px;
+                    width: 36px;
+                    height: 36px;
+                    line-height: 38px;
+                    border: 1px solid #ebebeb;
+                    color: #bdbdbd;
+                    font-size: 14px;
+                    background: rgba(255, 255, 255, 1);
+                    border: 1px solid rgba(215, 215, 215, 1);
+                    border-radius: 4px;
+                    pointer-events: auto;
+                }
+
+                    .my_page a:nth-child(1) {
+                        width: 90px;
+                        height: 36px;
+                    }
+
+                    .my_page a:nth-child(2) {
+                        width: 90px;
+                        height: 36px;
+                    }
+
+                .my_page .nowpage {
+                    background: rgba(163, 17, 3, 1);
+                }
+
+                .my_page a:nth-last-child(2) {
+                    width: 90px;
+                    height: 36px;
+                }
+
+                .my_page a:nth-last-child(1) {
+                    width: 90px;
+                    height: 36px;
+                }
+
+                .my_page .no_operation {
+                    pointer-events: none;
+                }
+        </style>
+        <div class="cons_box2 my_page">
+            <a href="#" onclick="location.href='index_1.jhtml#index'" class="no_operation" disabled="true">首页</a>
+            <a href="#" onclick="location.href='index_1.jhtml#index'" class="no_operation" disabled="true"> &lt; 上一页 </a>
+            <a class="nowpage no_operation" disabled="true" href="#" onclick="location.href='index_1.jhtml#index'">1</a>
+            <a href="#" onclick="location.href='index_1.jhtml#index'" class="no_operation" disabled="true">下一页 &gt;</a>
+            <a href="#" onclick="location.href='index_1.jhtml#index'" class="no_operation" disabled="true">尾页</a>
+        </div>
+    </ul>
+</div>
+        <link rel="stylesheet" href="common_info_footer.css" tppabs="http://www.hcwc.top/r/cms/www/custom/css/common_info_footer.css">
+        <div class="bl_footer">
+            <div class="w">
+                <dl>
+                    <dt>新手指南</dt>
+    <dd><a href="Index-id=8.html" tppabs="http://www.hcwc.top/sczs/Index?id=8">发布方式</a></dd>
+                    <dd><a href="Index-id=18.html" tppabs="http://www.hcwc.top/sczs/Index?id=18">在线发布</a></dd>
+                </dl>
+                <dl>
+                    <dt>会员须知</dt>
+                    <dd><a href="Index-id=21.html" tppabs="http://www.hcwc.top/sczs/Index?id=21">艺术品购买流程</a></dd>
+                    <dd><a href="Index-id=22.html" tppabs="http://www.hcwc.top/sczs/Index?id=22">买家须知</a></dd>
+                    <dd><a href="Index-id=23.html" tppabs="http://www.hcwc.top/sczs/Index?id=23">卖家须知</a></dd>
+                    <dd><a href="Index-id=24.html" tppabs="http://www.hcwc.top/sczs/Index?id=24">线上鉴定须知</a></dd>
+                    <dd><a href="Index-id=25.html" tppabs="http://www.hcwc.top/sczs/Index?id=25">会员隐私声明</a></dd>
+                </dl>
+                <dl>
+                    <dt>物流配送</dt>
+                    <dd><a href="Index-id=34.html" tppabs="http://www.hcwc.top/sczs/Index?id=34">配送常见问题</a></dd>
+                </dl>
+                <dl>
+                    <dt>帮助中心</dt>
+                    <dd><a href="Index-id=35.html" tppabs="http://www.hcwc.top/sczs/Index?id=35">卖家认证</a></dd>
+                </dl>
+                <dl>
+                    <dt>账号与服务</dt>
+                    <dd><a href="Index-id=31.html" tppabs="http://www.hcwc.top/sczs/Index?id=31">联系客服</a></dd>
+                    <dd><a href="Index-id=32.html" tppabs="http://www.hcwc.top/sczs/Index?id=32">账户功能</a></dd>
+                    <dd><a href="Index-id=33.html" tppabs="http://www.hcwc.top/sczs/Index?id=33">查找买品</a></dd>
+                </dl>
+                <dl>
+                    <dt>联系我们</dt>
+                    <dd>服务热线：027-84887654</dd>
+                    <dd>服务时间：周一到周日 8:00至 23:30</dd>
+                    <dd>
+                        <p>公司地址：湖北省武汉市</p>
+                        <p>洪山区唐山商会1栋2303室</p>
+                        <p></p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="bl_end">
+            <div class="w">
+                <p style="display: none;" id="view">498201</p>
+                <p style="display: none;" id="realview">58759</p>
+                <p>网站访问量<span class="inner" id="pv"></span></p>
+                <p>
+                    请广大藏友认真阅读文化部<a href="javascript:if(confirm('http://www.gov.cn/gongbao/content/2016/content_5070760.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.gov.cn/gongbao/content/2016/content_5070760.html'" tppabs="http://www.gov.cn/gongbao/content/2016/content_5070760.html" target="_blank" style="color: white;">《艺术品经营管理办法》</a>，确认未受到工作人员的不实宣传的误导和承诺。
+                </p><p>
+                    COPYRIGHT © 2019 汇诚文藏. ALL RIGHTS RESERVED 鄂ICP备19008904号
+                    网站建设：<a href="javascript:if(confirm('http://www.ruanyiit.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.ruanyiit.com/'" tppabs="http://www.ruanyiit.com/" title="信息技术有限公司" target="_blank"></a>
+                </p>
+            </div>
+        </div>
+        <script src="front.js" tppabs="http://www.hcwc.top/r/cms/front.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(function () {
+                var view = parseInt($("#view").text());
+                var realview = parseInt($("#realview").text());
+                if (!isNaN(view)) {
+                    realview += view;
+                }
+                var pv = ("" + realview).split('');
+                var text = '';
+                for (var i = 0; i < pv.length; i++) {
+                    text += "<i>" + pv[i] + "</i>";
+                }
+                $("#pv").append(text);
+                Cms.siteFlow("", location.href, document.referrer, "true");
+            });</script>
+    </body>
+    <style>
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .goods-container > ul {
+            text-align: center;
+        }
+
+        .bl_footer {
+            height: 353px;
+        }
+
+        .bl_end {
+            padding-top: 18px;
+        }
+
+        .cons_box2 {
+            margin-top: 20px;
+            display: inline-block;
+            position: unset;
+        }
+
+        .bl_login p {
+            margin-bottom: 0px;
+        }
+
+        .img-wrap img:nth-of-type(1) {
+            width: 100%;
+            height: 100%;
+        }
+
+        .img-wrap img:nth-of-type(2) {
+            width: 34%;
+            height: 46%;
+            position: absolute;
+            left: -47px;
+            top: -8px;
+        }
+    </style>
+    <!-- 轮播图 -->
+    <script src="rvc.js" tppabs="http://www.hcwc.top/r/cms/www/custom/js/rvc.js"></script>
+    <script type="text/javascript">$('#rvc1').rvc({
+        liNum: 4,//2~5之间的整数
+        spaceBetween: 30,//li项之间的距离
+        plr: 20,//当屏幕小于1024时，rvc的padding-left，padding-right值
+        time: 400,//动画时间
+        prv: '.rvc-prv',//前一个按钮
+        next: '.rvc-next'//下一个按钮
+
+    })
+    $('#rvc2').rvc({
+        liNum: 3,
+        spaceBetween: 40,
+        plr: 15,
+        time: 200,
+        prv: '.rvc-prv',
+        next: '.rvc-next'
+
+    })</script>
+</head>
+</html>

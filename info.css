@@ -1,0 +1,391 @@
+body {
+  background-color: #f5f5f5;
+}
+.redactive {
+  background-color: #D61705;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  min-height: 1850px;
+  position: relative;
+}
+.container .breadcrumb > li + li:before {
+  content: '';
+}
+.container .breadcrumb li a {
+  color: #212121;
+}
+.container .banner {
+  width: 1140px;
+  height: 350px;
+  background-color: #fff;
+}
+.container .banner h3 {
+  padding: 25px 0 0 20px;
+  color: #A31103;
+}
+.container .banner .rvc .rvc-wrapper ul {
+  width: 100%;
+  height: 245px;
+}
+.container .banner .rvc .rvc-wrapper ul li {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 7px;
+}
+.container .banner .rvc .rvc-wrapper ul li a .img-wrapper {
+  width: 100%;
+  height: 210px;
+  border: 1px solid #EBEBEB;
+  position: relative;
+}
+.container .banner .rvc .rvc-wrapper ul li a .img-wrapper span {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 64px;
+  height: 64px;
+  background-image: url("  拷贝.png")/*tpa=http://www.hcwc.top/r/cms/www/custom/images/VIP/ 拷贝.png*/;
+}
+.container .banner .rvc .rvc-wrapper ul li a .img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.container .banner .rvc .rvc-wrapper ul li a p {
+  color: #000;
+  text-align: center;
+  margin-top: 10px;
+  height: 20px;
+  padding: 0;
+}
+.container .banner .rvc .rvc-prv,
+.container .banner .rvc .rvc-next {
+  width: 30px;
+  height: 70px;
+  background-color: #000;
+  top: 75px;
+}
+.container .banner .rvc .rvc-prv {
+  left: -15px;
+}
+.container .banner .rvc .rvc-next {
+  right: -15px;
+}
+.container .g-info {
+  overflow: hidden;
+  width: 875px;
+}
+.container .g-info #exzoom {
+  float: left;
+  width: 400px;
+  height: 540px;
+  margin: 20px 0;
+  position: relative;
+}
+.container .g-info #exzoom .vip {
+  width: 64px;
+  height: 64px;
+  background-image: url("  拷贝.png")/*tpa=http://www.hcwc.top/r/cms/www/custom/images/VIP/ 拷贝.png*/;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 99;
+}
+.container .g-info #exzoom .exzoom_img_box .exzoom_img_ul li {
+  height: 400px;
+  width: 400px;
+}
+.container .g-info #exzoom .exzoom_img_box .exzoom_img_ul li img {
+  margin-top: 0px !important;
+  width: 100%;
+  height: 100%;
+}
+.container .g-info .g-time {
+  float: left;
+  margin: 20px 10px;
+  width: 450px;
+}
+.container .g-info .g-time .g-time-block h3 {
+  font-size: 20px;
+  width: 450px;
+}
+.container .g-info .g-time .g-time-block h6 {
+  font-size: 16px;
+  color: #6A6A6A;
+  margin: 35px 0;
+}
+.container .g-info .g-time .exhibit {
+  background: #A31103;
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+}
+.container .g-info .g-time .date {
+  font-size: 14px;
+  margin-top: 20px;
+  position: relative;
+}
+.container .g-info .g-time .date .g-font {
+  position: absolute;
+  top: 7px;
+  left: 0px;
+}
+.container .g-info .g-time .date .layout {
+  overflow: hidden;
+  height: 50px;
+  width: 340px;
+  margin-left: 80px;
+}
+.container .g-info .g-time .date .active {
+  width: 82px;
+  height: 42px;
+  float: left;
+}
+.container .g-info .g-time .date .layout a {
+  width: 50px;
+  height: 30px;
+  display: inline-block;
+  background: #E3E3E3;
+  text-align: center;
+  line-height: 30px;
+}
+.container .g-info .g-time .RMB {
+  width: 420px;
+  height: 100px;
+  background-color: #EDEDED;
+  margin: 20px 0;
+}
+.container .g-info .g-time .RMB p {
+  margin-bottom: 0;
+  font-size: 18px;
+  padding-top: 10px;
+  color: #6A6A6A;
+  padding-left: 10px ;
+}
+.container .g-info .g-time .RMB p span {
+  color: #D61705;
+  font-size: 24px;
+  font-weight: 700;
+}
+.container .g-info .g-time .collect_Like  {
+  width: 440px;
+}
+.container .g-info .g-time .collect_Like .collect,
+.container .g-info .g-time .Like {
+  width: 180px;
+  height: 50px;
+  display: inline-block;
+  background: #ECECEC;
+  text-align: center;
+  line-height: 50px;
+  border: 1px #cacaca solid;
+  margin-right: 20px;
+}
+.container .g-info .g-time .wg_sc {
+  margin: 8px 20px;
+}
+.container .g-info .g-time .wg_sc span {
+  color: blue;
+}
+.container .g-info .g-time .wg_sc p {
+  display: inline-block;
+  font-size: 12px;
+}
+.container .g-info .g-time .left_btn {
+  text-align: center;
+}
+.container .g-info .g-time .left_btn button {
+  width: 250px;
+  height: 60px;
+  border: 1px #A31103 solid;
+  background: #fff;
+  color: #A31103;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.container .g-inforeader {
+  width: 875px;
+}
+.container .g-inforeader .g-text {
+  width: 100%;
+  border-bottom: 1px solid #D7D7D7;
+  margin-bottom: 35px;
+  overflow: hidden;
+}
+.container .g-inforeader .g-text h2 {
+  color: #A31103;
+  font-size: 18px;
+  font-weight: 700;
+  width: 80px;
+  height: 36px;
+  border-bottom: 3px solid #A31103;
+}
+.container .g-inforeader table tr {
+  height: 42px;
+}
+.container .g-inforeader table tr td:nth-child(odd) {
+  text-align: center;
+  background-color: #fff;
+  width: 110px;
+}
+.container .g-inforeader table tr td:nth-child(even) {
+  width: 300px;
+}
+.container .g-inforeader .txt h2 {
+  color: #A31103;
+  font-size: 18px;
+  font-weight: 700;
+  width: 120px;
+  height: 36px;
+}
+.container .g-inforeader .txt p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.container .g-inforeader .txt p:nth-child(1) {
+  color: #7A7A7A;
+}
+.container .g-inforeader .g-listinfo .g-Tips {
+  width: 204px;
+  height: 40px;
+  background-image: url("  539.png")/*tpa=http://www.hcwc.top/r/cms/www/custom/images/矩形/ 539.png*/;
+}
+.container .g-inforeader .g-listinfo .g-Tips h2 {
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 40px;
+}
+.container .g-inforeader .g-listinfo .g-tips-teb {
+  width: 100%;
+  height: 35px;
+  background-color: #898989;
+  margin: 10px 0 20px 0;
+}
+.container .g-inforeader .g-listinfo .g-tips-teb p {
+  color: #FFF;
+  font-size: 18px;
+  padding-left: 38px;
+  line-height: 35px;
+}
+.container .g-inforeader .g-listinfo ul li {
+  width: 100%;
+  margin: 40px 0;
+  overflow: hidden;
+}
+.container .g-inforeader .g-listinfo ul li span {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  background-image: url("backgroundred1.png")/*tpa=http://www.hcwc.top/r/cms/www/custom/images/backgroundred1.png*/;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  color: #FFF;
+  line-height: 38px;
+  text-align: center;
+  float: left;
+}
+.container .g-inforeader .g-listinfo ul li p {
+  width: 828px;
+  display: inline-block;
+  padding-left: 10px ;
+  float: left;
+}
+.container .g-side {
+  position: absolute;
+  top: 428px;
+  left: 905px;
+}
+.container .g-side .user a {
+  width: 250px;
+  height: 60px;
+  background-color: #F5F5F5;
+  border: 1px solid #D61705;
+  border-radius: 10px;
+  font-size: 25px;
+  color: #D61705;
+  display: block;
+  text-align: center;
+  line-height: 60px;
+}
+.container .g-side .user .user-info {
+  width: 250px;
+  height: 460px;
+  border: 1px solid #ECECEC;
+  margin: 20px 0;
+  text-align: center;
+}
+.container .g-side .user .user-info img {
+  margin-top: 28px;
+  margin-bottom: 20px;
+}
+.container .g-side .user .user-info h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.container .g-side .user .user-info h3:nth-child(3) {
+  color: #D61705;
+  font-size: 16px;
+}
+.container .g-side .user .user-info .das {
+  width: 207px;
+  height: 1px;
+  display: inline-block;
+  border: 1px dashed #ECECEC;
+}
+.container .g-side .user .user-info p {
+  text-align: left;
+  font-size: 14px;
+  margin: 10px 20px;
+  color: #A6A6A6;
+}
+.container .g-side .user .user-info p span {
+  color: #000;
+}
+.container h5 {
+  display: block;
+  width: 250px;
+  height: 50px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+}
+.container .box-slider .box-slider-content li {
+  text-align: center;
+  height: 245px;
+  margin-bottom: 46px;
+}
+.container .box-slider .box-slider-content li .banner-a {
+  display: inline-block;
+  width: 210px;
+  height: 245px;
+  position: relative;
+  text-decoration: none;
+  margin-top: 7px;
+}
+.container .box-slider .box-slider-content li .banner-a span {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 64px;
+  height: 64px;
+  background-image: url("  拷贝.png")/*tpa=http://www.hcwc.top/r/cms/www/custom/images/VIP/ 拷贝.png*/;
+}
+.container .box-slider .box-slider-content li .banner-a img {
+  width: 210px;
+  height: 210px;
+}
+.container .box-slider .box-slider-content li .banner-a p {
+  text-align: center;
+  line-height: 25px;
+  padding-top: 10px ;
+  color: #000;
+}
