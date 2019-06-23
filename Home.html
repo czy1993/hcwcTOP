@@ -8,17 +8,23 @@
 <title>首页 - 瑞丰文藏网</title>
 <meta http-equiv="keywords" content="瑞丰文藏">
 <meta http-equiv="description" content="498201">
-<link rel="stylesheet" href="reset.css" tppabs="http://www.hcwc.top/r/cms/www/custom/css/reset.css">
-<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.hcwc.top/r/cms/www/custom/css/bootstrap.min.css">
-<link rel="stylesheet" href="index.css" tppabs="http://www.hcwc.top/r/cms/www/custom/css/index.css">
-<link rel="stylesheet" href="main.css" tppabs="http://www.hcwc.top/r/cms/www/custom/css/main.css">
+<link rel="icon" href="./img/centerImg/logo.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="reset.css" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/css/reset.css">
+<link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/css/bootstrap.min.css">
+<link rel="stylesheet" href="index.css" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/css/index.css">
+<link rel="stylesheet" href="main.css" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.3/css/swiper.min.css">
 <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" />
+<link href="./css/swiper.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.3/js/swiper.min.js"></script>
+
 <script src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
 
-<!-- <script src="jquery.min.js" tppabs="http://www.hcwc.top/r/cms/www/custom/js/jquery.min.js"></script> -->
-<!-- <script src=".min.js" tppabs="http://www.hcwc.top/r/cms/www/custom/js/bootstrap.min.js"></script> -->
-<script src="jquery.js" tppabs="http://www.hcwc.top/r/cms/jquery.js" type="text/javascript"></script>
-<script src="front.js" tppabs="http://www.hcwc.top/r/cms/front.js" type="text/javascript"></script>
+<!-- <script src="jquery.min.js" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/js/jquery.min.js"></script> -->
+<!-- <script src=".min.js" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/js/bootstrap.min.js"></script> -->
+<script src="jquery.js" tppabs="http://www.ruifengwcatr.com/r/cms/jquery.js" type="text/javascript"></script>
+<script src="front.js" tppabs="http://www.ruifengwcatr.com/r/cms/front.js" type="text/javascript"></script>
+<script src="./js/swiper.js"  type="text/javascript"></script>
 <style>
     li {
         list-style: none;
@@ -81,7 +87,7 @@
     function query(){
         event.preventDefault();
         $.ajax({
-            url: "http://www.hcwc.top/createToken.jspx", async: false, dataType: "json", success: function (data) {
+            url: "http://www.ruifengwcatr.com/createToken.jspx", async: false, dataType: "json", success: function (data) {
                 $("#token").val(data.token);
             }
         });
@@ -96,16 +102,17 @@
                 query();
             }
         });
-    });</script>
+    });
+    </script>
 <head>
     <body>
         <!-- 头部 s -->
-        <div class="header">
-            <div class="w12" style="margin-top:10px">
+        <div class="header" style="height: 100px;display: none;">
+            <div class="w12" style="margin-top:10px;" >
                 <nav class="navbar navbar-default navbar-inverse" role="navigation">
                     <div class="container">
                         <div class="navbar-header" style="width: 200px;float: left;">
-                            <a class="navbar-brand" href="javascript:if(confirm('http://www.hcwc.top/index.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ������������ļ�δ�ҵ���  \n\n�����ڷ������ϴ���?'))window.location='http://www.hcwc.top/index.htmll'" tppabs="http://www.hcwc.top/index.htmll" style="width: 75%;height: 50px;padding: 3px 0px 3px 10px;">
+                            <a class="navbar-brand" href="#" tppabs="http://www.ruifengwcatr.com/index.htmll" style="width: 75%;height: 50px;padding: 3px 0px 3px 10px;">
                                 <img src="img/centerImg/ruifeng_logo.png"  alt="瑞丰文藏网" style="width: 100%;height: 100%;">
                             </a>
                         </div>
@@ -114,65 +121,113 @@
                             display: inline-flex;
                             justify-content: space-between;">
                                 <li>
-                                    <a class="dropdown-toggle" href="Home.html" tppabs="http://www.hcwc.top/Home">首页</a>
+                                    <a class="dropdown-toggle" href="Home.html" tppabs="http://www.ruifengwcatr.com/Home">首页</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-toggle" href="zxzx.html" tppabs="http://www.hcwc.top/zxzx">展览展销</a>
+                                    <a href="spzx.html" tppabs="http://www.ruifengwcatr.com/spzx">环球展厅</a>
                                 </li>
                                 <li>
-                                    <a href="spzx.html" tppabs="http://www.hcwc.top/spzx">视频展销</a>
+                                    <a class="dropdown-toggle" href="zxzx.html" tppabs="http://www.ruifengwcatr.com/zxzx">展览展销</a>
                                 </li>
-                                <li><a href="VIP.html" tppabs="http://www.hcwc.top/VIP">VIP专场</a></li>
-                                <li><a href="about.html" tppabs="http://www.hcwc.top/sczs/about">关于我们</a></li>
+                                
+                                <li><a href="VIP.html" tppabs="http://www.ruifengwcatr.com/VIP">VIP专场</a></li>
+                                <li><a href="about.html" tppabs="http://www.ruifengwcatr.com/sczs/about">关于我们</a></li>
                                 <li><a href="#"></a></li>
                                 <li><a href="#"></a></li>
                                 <li><a href="#"></a></li>
                                 <li><a href="#"></a></li>
                                 <li><a href="#"></a></li>
                                 <li><a href="#"></a></li>
-                                <li style="margin-right: 10px;">
-                                    <!-- <a style="color: #fff !important"><img class="my3" src="4.png" tppabs="http://www.hcwc.top/r/cms/www/custom/images/4.png" alt="">027-84887654</a> -->
-                                </li>
                             </ul>
                         </div>
                     </div>
                 </nav>
             </div>
+            <div >
+                <div class="header-top">
+
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+        </div>
+        <div >
+            <div class="header-top">
+                <div class="header-top-left">
+                    <div>
+                        <img src="./img/centerImg/tz.png" alt="">
+                        <span>重要通知:</span>
+                        
+                    </div>
+                    <div id="ad-wrapper-box" style="color: #fff">凡需要在本平台进行展览推广的藏品，本平台免费提供资深专家鉴定，鉴定结果符合本平台服务要求的藏品才能进行展览推广服务。</div>
+                </div>
+                <div class="header-top-right">
+                    <a href="#">登录</a>
+                    <i>|</i>
+                    <a href="#">注册</a>
+                    <span style="margin-left: 10px">分享到:</span>
+                    <img src="./img/centerImg/wechart.png" alt="">
+                    <img src="./img/centerImg/qq.png" alt="">
+                    <img src="./img/centerImg/weibo.png" alt="">
+                </div>
+            </div>
+            <div class="header-nav">
+                <div class="header-nav-top">
+                    <img src="./img/centerImg/logo.png" alt="">
+                    <div>
+                        <h3>瑞丰文藏</h3>
+                        <p>全球艺术品中介服务平台</p>
+                    </div>
+                </div>
+                <div class="header-nav-center">
+                    <div>
+                        <a href="spzx.html">环球展厅</a>
+                        <a href="zxzx.html">展览展销</a>
+                        <a href="VIP.html">VIP专场</a>
+                        <a href="about.html">关于我们</a>
+                    </div>
+                    <div class="header-nav-sousuo">
+                        <input type="text">
+                        <div>
+                            <img src="./img/centerImg/sousuo.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="header-nav-foot">
+                    <img src="./img/centerImg/phone.png" alt="">
+                    <div>
+                        <p>官方统一热线</p>
+                        <h4>027  --  --</h5>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- 头部 e -->
         <!-- 轮播图 s -->
         <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel" style="overflow: hidden;">
-            <ol class=" carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" ></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
-                <div class="carousel-inner cio" role="listbox" style="overflow: hidden; ">
-                    <div class="item  active">
-                        <a style="background-image: url(img/centerImg/3.png);"></a>
-                        <div class="carousel-caption">
+                <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./img/centerImg/4.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/centerImg/2.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/centerImg/3.png" alt="">
+                            </div>
                         </div>
+                        <!-- 如果需要分页器 -->
+                        <div class="swiper-pagination"></div>
+                        
+                        <!-- 如果需要导航按钮 -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        
+                        <!-- 如果需要滚动条 -->
+                        <div class="swiper-scrollbar"></div>
                     </div>
-                    <div class="item  ">
-                        <a style="background-image: url(img/centerImg/2.png);"></a>
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    <div class="item  ">
-                        <a style="background-image: url(img/centerImg/3.png);"></a>
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                </div>
-                <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
         </div>
         <!-- 轮播图 e-->
         <!-- 藏品分类 s -->
@@ -186,39 +241,39 @@
                 <div class="lei1">
                     <div>
                         <div class="gtr gtt1"></div>
-                        <a class="gtt " href="Index-TypeID=1&Page=1.html" tppabs="http://www.hcwc.top/zxzx/Index?TypeID=1&Page=1">
+                        <a class="gtt " href="Index-TypeID=1&Page=1.html" tppabs="http://www.ruifengwcatr.com/zxzx/Index?TypeID=1&Page=1">
                             <img src="13.png" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/13.png" alt="" class="ciow">
                             <div>瓷器</div>
                             <div>PORCELAIN</div>
                         </a>
                     </div>
                     <div>
-                        <div class="gtr gtt2" href="Index-TypeID=3&&Page=1.html" tppabs="http://www.hcwc.top/zxzx/Index?TypeID=3&&Page=1"></div>
-                        <a class="gtt" href="Index-TypeID=3&Page=1.html" tppabs="http://www.hcwc.top/zxzx/Index?TypeID=3&Page=1">
+                        <div class="gtr gtt2" href="Index-TypeID=3&&Page=1.html" tppabs="http://www.ruifengwcatr.com/zxzx/Index?TypeID=3&&Page=1"></div>
+                        <a class="gtt" href="Index-TypeID=3&Page=1.html" tppabs="http://www.ruifengwcatr.com/zxzx/Index?TypeID=3&Page=1">
                             <img src="14.png" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/14.png" alt="" class="ciow">
                             <div>玉器</div>
                             <div>JADE</div>
                         </a>
                     </div>
                     <div>
-                        <div class="gtr gtt3" href="Index-TypeID=2&&Page=1.html" tppabs="http://www.hcwc.top/zxzx/Index?TypeID=2&&Page=1"></div>
-                        <a class="gtt " href="Index-TypeID=2&Page=1.html" tppabs="http://www.hcwc.top/zxzx/Index?TypeID=2&Page=1">
+                        <div class="gtr gtt3" href="Index-TypeID=2&&Page=1.html" tppabs="http://www.ruifengwcatr.com/zxzx/Index?TypeID=2&&Page=1"></div>
+                        <a class="gtt " href="Index-TypeID=2&Page=1.html" tppabs="http://www.ruifengwcatr.com/zxzx/Index?TypeID=2&Page=1">
                             <img src="15.png" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/15.png" alt="" class="ciow">
                             <div>字画</div>
                             <div>PAINTINGS</div>
                         </a>
                     </div>
                     <div>
-                        <div class="gtr gtt4" href="Index-TypeID=4&&Page=1.html" tppabs="http://www.hcwc.top/zxzx/Index?TypeID=4&&Page=1"></div>
-                        <a class="gtt " href="Index-TypeID=4&Page=1.html" tppabs="http://www.hcwc.top/zxzx/Index?TypeID=4&Page=1">
+                        <div class="gtr gtt4" href="Index-TypeID=4&&Page=1.html" tppabs="http://www.ruifengwcatr.com/zxzx/Index?TypeID=4&&Page=1"></div>
+                        <a class="gtt " href="Index-TypeID=4&Page=1.html" tppabs="http://www.ruifengwcatr.com/zxzx/Index?TypeID=4&Page=1">
                             <img src="16.png" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/16.png" alt="" class="ciow">
                             <div>杂项</div>
                             <div>MISCELLANEOUS</div>
                         </a>
                     </div>
                     <div>
-                        <div class="gtr gtt5" href="Index-TypeID=9&&Page=1.html" tppabs="http://www.hcwc.top/zxzx/Index?TypeID=9&&Page=1"></div>
-                        <a class="gtt" href="Index-TypeID=9&Page=1.html" tppabs="http://www.hcwc.top/zxzx/Index?TypeID=9&Page=1">
+                        <div class="gtr gtt5" href="Index-TypeID=9&&Page=1.html" tppabs="http://www.ruifengwcatr.com/zxzx/Index?TypeID=9&&Page=1"></div>
+                        <a class="gtt" href="Index-TypeID=9&Page=1.html" tppabs="http://www.ruifengwcatr.com/zxzx/Index?TypeID=9&Page=1">
                             <img src="17.png" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/17.png" alt="" class="ciow">
                             <div>钱币</div>
                             <div>COIN</div>
@@ -237,38 +292,37 @@
                     <img src="7.png" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/7.png" alt="">
                 </div>
                 <div class="zhix">
-                    <a href="#" class="tuuo"><img src="2015271520pb.jpeg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/u/cms/www/201903/2015271520pb.jpeg" alt="中国流失海外文物众多 我们可以做什么？" title="中国流失海外文物众多 我们可以做什么？"></a>
+                    <a href="#" class="tuuo"><img src="./img/centerImg/5.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/u/cms/www/201903/2015271520pb.jpeg" alt="中国流失海外文物众多 我们可以做什么？" title="中国流失海外文物众多 我们可以做什么？"></a>
                     <div class="wz">
                         <div class="cpqtop">
                             <div class="tui">
-
                                     <div>
-                                        <img class="kill" src="18.png" tppabs="http://www.hcwc.top/r/cms/www/custom/images/18.png" alt="">
-                                        <a class="samll" href="Index-id=7.html" tppabs="http://www.hcwc.top/sczs/Index?id=7">&#x827A;&#x672F;&#x54C1;&#x7EBF;&#x4E0A;&#x5E02;&#x573A;&#x524D;&#x666F;&#x5C55;&#x671B;</a>
+                                        <img class="kill" src="18.png" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/18.png" alt="">
+                                        <a class="samll" href="Index-id=5.html" tppabs="http://www.ruifengwcatr.com/sczs/Index?id=5">&#x6587;&#x7269;&#x5C55;&#x51FA;&#x7387;&#x4ECE;2%&#x5230;30% &#x6545;&#x5BAB;&#x5C55;&#x89C8;&#x201C;&#x5927;&#x7206;&#x53D1;&#x201D;</a>
                                         <span class="new">NEW</span>
                                         <div class="help"></div>
                                     </div>
                                     <div>
-                                        <img class="kill" src="18.png" tppabs="http://www.hcwc.top/r/cms/www/custom/images/18.png" alt="">
-                                        <a class="samll" href="Index-id=6.html" tppabs="http://www.hcwc.top/sczs/Index?id=6">&#x666F;&#x5FB7;&#x9547;&#x9676;&#x74F7;&#x7684;&#x6210;&#x957F;&#x4E0E;&#x53D8;&#x8FC1;</a>
+                                        <img class="kill" src="18.png" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/18.png" alt="">
+                                        <a class="samll" href="Index-id=4.html" tppabs="http://www.ruifengwcatr.com/sczs/Index?id=4">&#x4E0D;&#x662F;&#x4F60;&#x6709;&#x94B1;&#x4E86;&#x624D;&#x6536;&#x85CF;&#xFF0C;&#x800C;&#x662F;&#x6536;&#x85CF;&#x4F1A;&#x4EE4;&#x4F60;&#x53D8;&#x5F97;&#x5BCC;&#x6709;</a>
                                         <span class="new">NEW</span>
                                         <div class="help"></div>
                                     </div>
                                     <div>
-                                        <img class="kill" src="18.png" tppabs="http://www.hcwc.top/r/cms/www/custom/images/18.png" alt="">
-                                        <a class="samll" href="Index-id=5.html" tppabs="http://www.hcwc.top/sczs/Index?id=5">&#x6587;&#x7269;&#x5C55;&#x51FA;&#x7387;&#x4ECE;2%&#x5230;30% &#x6545;&#x5BAB;&#x5C55;&#x89C8;&#x201C;&#x5927;&#x7206;&#x53D1;&#x201D;</a>
+                                        <img class="kill" src="18.png" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/18.png" alt="">
+                                        <a class="samll" href="Index-id=6.html" tppabs="http://www.ruifengwcatr.com/sczs/Index?id=6">&#x666F;&#x5FB7;&#x9547;&#x9676;&#x74F7;&#x7684;&#x6210;&#x957F;&#x4E0E;&#x53D8;&#x8FC1;</a>
                                         <span class="new">NEW</span>
                                         <div class="help"></div>
                                     </div>
                                     <div>
-                                        <img class="kill" src="18.png" tppabs="http://www.hcwc.top/r/cms/www/custom/images/18.png" alt="">
-                                        <a class="samll" href="Index-id=4.html" tppabs="http://www.hcwc.top/sczs/Index?id=4">&#x4E0D;&#x662F;&#x4F60;&#x6709;&#x94B1;&#x4E86;&#x624D;&#x6536;&#x85CF;&#xFF0C;&#x800C;&#x662F;&#x6536;&#x85CF;&#x4F1A;&#x4EE4;&#x4F60;&#x53D8;&#x5F97;&#x5BCC;&#x6709;</a>
+                                        <img class="kill" src="18.png" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/18.png" alt="">
+                                        <a class="samll" href="Index-id=3.html" tppabs="http://www.ruifengwcatr.com/sczs/Index?id=3">&#x9986;&#x85CF;&#x56FD;&#x5B9D;&#x3010;&#x53F2;&#x524D;&#x81F3;&#x6C49;&#x4EE3;&#x7389;&#x8D1D;&#x3011;</a>
                                         <span class="new">NEW</span>
                                         <div class="help"></div>
                                     </div>
                                     <div>
-                                        <img class="kill" src="18.png" tppabs="http://www.hcwc.top/r/cms/www/custom/images/18.png" alt="">
-                                        <a class="samll" href="Index-id=3.html" tppabs="http://www.hcwc.top/sczs/Index?id=3">&#x9986;&#x85CF;&#x56FD;&#x5B9D;&#x3010;&#x53F2;&#x524D;&#x81F3;&#x6C49;&#x4EE3;&#x7389;&#x8D1D;&#x3011;</a>
+                                        <img class="kill" src="18.png" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/18.png" alt="">
+                                        <a class="samll" href="Index-id=7.html" tppabs="http://www.ruifengwcatr.com/sczs/Index?id=7">&#x827A;&#x672F;&#x54C1;&#x7EBF;&#x4E0A;&#x5E02;&#x573A;&#x524D;&#x666F;&#x5C55;&#x671B;</a>
                                         <span class="new">NEW</span>
                                         <div class="help"></div>
                                     </div>
@@ -287,68 +341,59 @@
                 <img src="7.png" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/7.png" alt="">
             </div>
             <div class="ley">
-                <a id="better_a" href="Index.html" tppabs="http://www.hcwc.top/zxzx/Index" class="more1">查看更多 > </a>
+                <a id="better_a" href="Index.html" tppabs="http://www.ruifengwcatr.com/zxzx/Index" class="more1">查看更多 > </a>
             </div>
             <div class="all">
                 <div class="pig">
                     <div class="one ones">
-                        <div style="background-image: url(https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/9.png);">
-                            <div class="want" style="background-color: rgba(26, 42, 57, .6);">
-                                <div class="queen">
-                                    <img class="gif" src="19.png" tppabs="http://www.hcwc.top/r/cms/www/custom/images/19.png" alt="">
-                                    <span class="jeek" style="color: #fff"><span class="every">藏品</span><span class="eve" style="margin: 16px 7px 0 7px; width: 5px; height: 5px;"></span></span>
-                                    <img class="gif1" src="21.png" tppabs="http://www.hcwc.top/r/cms/www/custom/images/21.png" alt="">
-                                </div>
-                                <div class="bill" style=" padding-top: 90px;">九秋风露越窑开</div>
-                                <div class="bill">夺得千峰翠色来</div>
-                                <a href="Index.html" tppabs="http://www.hcwc.top/zxzx/Index" class="cont"><img src="23.png" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/23.png" alt=""></a>
-                            </div>
+                        <div style="background-image: url(https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/54.jpeg);">
+                            
                         </div>
-                                <a href="zxdetails-ID=22.html" tppabs="http://www.hcwc.top/zxzx/zxdetails?ID=22">
-                                    <img class="xxx" src="54c7d5977de94ca8b2c9e870767932be.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-14/54c7d5977de94ca8b2c9e870767932be.jpg" alt="">
-                                    <img src="vip.gif" tppabs="http://www.hcwc.top/r/cms/www/custom/images/vip.gif" class="bl_VIP">
-                                    <div class="dwq">&#x9752;&#x82B1;&#x5C71;&#x6C34;&#x7EB9;&#x76D8;</div>
+                                <a href="zxdetails-ID=22.html" >
+                                    <img class="xxx" src="54c7d5977de94ca8b2c9e870767932be.jpg" alt="">
+                                    <img src="vip.gif"  class="bl_VIP">
+                                    <div class="dwq">青花山水纹盘</div>
                                         <div class="dwq1">售价：议价</div>
                                 </a>
-                                <a href="zxdetails-ID=26.html" tppabs="http://www.hcwc.top/zxzx/zxdetails?ID=26">
+                                <a href="zxdetails-ID=26.html" tppabs="http://www.ruifengwcatr.com/zxzx/zxdetails?ID=26">
                                     <img class="xxx" src="44608fb4b7bb47bb91bd4e25a527d17e.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-14/44608fb4b7bb47bb91bd4e25a527d17e.jpg" alt="">
-                                    <img src="vip.gif" tppabs="http://www.hcwc.top/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                                    <img src="vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
                                     <div class="dwq">&#x6C5D;&#x7A91;&#x9E7F;&#x89D2;&#x676F;&#x4E00;&#x5BF9;</div>
                                         <div class="dwq1">售价：议价</div>
                                 </a>
-                                <a href="zxdetails-ID=32.html" tppabs="http://www.hcwc.top/zxzx/zxdetails?ID=32">
+                                <a href="zxdetails-ID=32.html" tppabs="http://www.ruifengwcatr.com/zxzx/zxdetails?ID=32">
                                     <img class="xxx" src="bfc1663215ee41c6b6c9c549d231fc1a.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-14/bfc1663215ee41c6b6c9c549d231fc1a.jpg" alt="">
-                                    <img src="vip.gif" tppabs="http://www.hcwc.top/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                                    <img src="vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
                                     <div class="dwq">&#x58A8;&#x5730;&#x63CF;&#x91D1;&#x7F20;&#x679D;&#x7261;&#x4E39;&#x7EB9;&#x8336;&#x5177;</div>
                                         <div class="dwq1">售价：议价</div>
                                 </a>
                     </div>
                     <div class="one">
-                        <a href="zxdetails-ID=40.html" tppabs="http://www.hcwc.top/zxzx/zxdetails?ID=40">
+                        <a href="zxdetails-ID=40.html" tppabs="http://www.ruifengwcatr.com/zxzx/zxdetails?ID=40">
                
                             <img class="xxx" src="a47a154cd3cc4453897a552dfd8a3f58.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-14/a47a154cd3cc4453897a552dfd8a3f58.jpg" alt="">
-                            <img src="vip.gif" tppabs="http://www.hcwc.top/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                            <img src="vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
                             <div class="dwq">&#x9752;&#x82B1;&#x9C7C;&#x85FB;&#x8377;&#x53F6;&#x76D6;&#x7F50;</div>
                                 <div class="dwq1">售价：议价</div>
                         </a>
-                        <a href="zxdetails-ID=41.html" tppabs="http://www.hcwc.top/zxzx/zxdetails?ID=41">
+                        <a href="zxdetails-ID=41.html" tppabs="http://www.ruifengwcatr.com/zxzx/zxdetails?ID=41">
                
                             <img class="xxx" src="f758bb5b11bf43ae90b57cd8254039bf.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-14/f758bb5b11bf43ae90b57cd8254039bf.jpg" alt="">
-                            <img src="vip.gif" tppabs="http://www.hcwc.top/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                            <img src="vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
                             <div class="dwq">&#x9752;&#x82B1;&#x91C9;&#x91CC;&#x7EA2;&#x4E91;&#x9F99;&#x7EB9;&#x6885;&#x74F6;</div>
                                 <div class="dwq1">售价：议价</div>
                         </a>
-                        <a href="zxdetails-ID=42.html" tppabs="http://www.hcwc.top/zxzx/zxdetails?ID=42">
+                        <a href="zxdetails-ID=42.html" tppabs="http://www.ruifengwcatr.com/zxzx/zxdetails?ID=42">
                
                             <img class="xxx" src="0aac8adf10d0423cb87ff01377b70034.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-14/0aac8adf10d0423cb87ff01377b70034.jpg" alt="">
-                            <img src="vip.gif" tppabs="http://www.hcwc.top/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                            <img src="vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
                             <div class="dwq">&#x5B98;&#x7A91;&#x4E09;&#x8DB3;&#x7089;</div>
                                 <div class="dwq1">售价：议价</div>
                         </a>
-                        <a href="zxdetails-ID=43.html" tppabs="http://www.hcwc.top/zxzx/zxdetails?ID=43">
+                        <a href="zxdetails-ID=43.html" tppabs="http://www.ruifengwcatr.com/zxzx/zxdetails?ID=43">
                
                             <img class="xxx" src="f2f235dd104d470f93808f14767edc0e.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-14/f2f235dd104d470f93808f14767edc0e.jpg" alt="">
-                            <img src="vip.gif" tppabs="http://www.hcwc.top/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                            <img src="vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
                             <div class="dwq">&#x6C5D;&#x7A91;&#x5929;&#x9752;&#x91C9;&#x83B2;&#x82B1;&#x5F0F;&#x6E29;&#x7897;</div>
                                 <div class="dwq1">售价：议价</div>
                         </a>
@@ -359,40 +404,51 @@
             </div>
             <!-- 广告-->
             <a href="#" target="_blank" title="">
-                <img src="img/centerImg/art-a.jpg" tppabs="http://www.hcwc.top/u/cms/www/201903/17164239o3sf.jpeg" class="neuth">
+                <img src="img/centerImg/art-a.jpg" tppabs="http://www.ruifengwcatr.com/u/cms/www/201903/17164239o3sf.jpeg" class="neuth">
             </a>
         </div>
         <!-- VIP精品 e -->
         <!-- 专场展厅 s -->
         <div class="exhibition w1200">
             <div class="lei">
-                <img src="6-1.png" tppabs="http://www.hcwc.top/r/cms/www/custom/images/6.png" alt="">
-                <span>视频展销</span>
-                <img src="7-1.png" tppabs="http://www.hcwc.top/r/cms/www/custom/images/7.png" alt="">
+                <img src="6-1.png" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/6.png" alt="">
+                <span>环球展厅</span>
+                <img src="7-1.png" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/7.png" alt="">
             </div>
-            <div class="ley"> <a id="better_a" href="spzx.html" tppabs="http://www.hcwc.top/spzx" class="more1">查看更多 > </a></div>
+            <div class="ley"> <a id="better_a" href="spzx.html" tppabs="http://www.ruifengwcatr.com/spzx" class="more1">查看更多 > </a></div>
             <div class="all">
                 <div class="pig">
                     <div class="one ones">
-                        <div style="background-image: url(https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/54.jpeg);"></div>
+                        <div style="background-image: url(https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/9.png);">
+                            <div class="want" style="background-color: rgba(26, 42, 57, .6);">
+                                    <div class="queen">
+                                        <img class="gif" src="19.png" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/19.png" alt="">
+                                        <span class="jeek" style="color: #fff"><span class="every">藏品</span><span class="eve" style="margin: 16px 7px 0 7px; width: 5px; height: 5px;"></span></span>
+                                        <img class="gif1" src="21.png" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/21.png" alt="">
+                                    </div>
+                                    <div class="bill" style=" padding-top: 90px;">九秋风露越窑开</div>
+                                    <div class="bill">夺得千峰翠色来</div>
+                                    <a href="Index.html" tppabs="http://www.ruifengwcatr.com/zxzx/Index" class="cont"><img src="23.png" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/23.png" alt=""></a>
+                                </div>
+                        </div>
 
-                                <a href="Spdetails-ID=113.html" tppabs="http://www.hcwc.top/spzx/Spdetails?ID=113">
+                                <a href="Spdetails-ID=113.html" tppabs="http://www.ruifengwcatr.com/spzx/Spdetails?ID=113">
                                     <img class="xxx" src="231034ba55564f9eb622a04050ca50a1.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-15/231034ba55564f9eb622a04050ca50a1.jpg" alt="">
-                                    <img src="vip.gif" tppabs="http://www.hcwc.top/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                                    <img src="vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
                                     <div class="dwq">&#x9752;&#x82B1;&#x4E94;&#x5F69;&#x9F99;&#x7EB9;&#x5929;&#x7403;&#x74F6;</div>
                                         <div class="dwq1">售价：议价</div>
 
                                 </a>
-                                <a href="Spdetails-ID=121.html" tppabs="http://www.hcwc.top/spzx/Spdetails?ID=121">
+                                <a href="Spdetails-ID=121.html" tppabs="http://www.ruifengwcatr.com/spzx/Spdetails?ID=121">
                                     <img class="xxx" src="c10dd33c706442f2b9429a9b2b1e3edb.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-16/c10dd33c706442f2b9429a9b2b1e3edb.jpg" alt="">
-                                    <img src="vip.gif" tppabs="http://www.hcwc.top/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                                    <img src="vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
                                     <div class="dwq">&#x73D0;&#x7405;&#x5F69;&#x82B1;&#x9E1F;&#x5BCC;&#x8D35;&#x83F1;&#x5F62;&#x80C6;&#x74F6;</div>
                                         <div class="dwq1">售价：议价</div>
 
                                 </a>
-                                <a href="Spdetails-ID=130.html" tppabs="http://www.hcwc.top/spzx/Spdetails?ID=130">
+                                <a href="Spdetails-ID=130.html" tppabs="http://www.ruifengwcatr.com/spzx/Spdetails?ID=130">
                                     <img class="xxx" src="ae23c8305cfe480095a171502554ae8a.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-16/ae23c8305cfe480095a171502554ae8a.jpg" alt="">
-                                    <img src="vip.gif" tppabs="http://www.hcwc.top/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                                    <img src="vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
                                     <div class="dwq">&#x7C89;&#x5F69;&#x82B1;&#x5349;&#x7EB9;&#x798F;&#x5BFF;&#x6C34;&#x6D17;&#xFF08;&#x53CB;&#x68E0;&#x6D74;&#x781A;&#x4E66;&#x5C4B;&#x6B3E;&#xFF09;</div>
                                         <div class="dwq1">售价：议价</div>
 
@@ -401,27 +457,27 @@
                     </div>
                     <div class="one">
 
-                                <a href="Spdetails-ID=132.html" tppabs="http://www.hcwc.top/spzx/Spdetails?ID=132">
+                                <a href="Spdetails-ID=132.html" tppabs="http://www.ruifengwcatr.com/spzx/Spdetails?ID=132">
                                     <img class="xxx" src="9db79de1f578464ab5516d7a5150d835.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-16/9db79de1f578464ab5516d7a5150d835.jpg" alt="">
-                                    <img src="vip.gif" tppabs="http://www.hcwc.top/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                                    <img src="vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
                                     <div class="dwq">&#x796D;&#x84DD;&#x91C9;&#x8D4F;&#x76D8;</div>
                                         <div class="dwq1">售价：议价</div>
                                 </a>
-                                <a href="Spdetails-ID=167.html" tppabs="http://www.hcwc.top/spzx/Spdetails?ID=167">
+                                <a href="Spdetails-ID=167.html" tppabs="http://www.ruifengwcatr.com/spzx/Spdetails?ID=167">
                                     <img class="xxx" src="b7fff78e3c9e452ca906c19e4fe468a6.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-23/b7fff78e3c9e452ca906c19e4fe468a6.jpg" alt="">
-                                    <img src="vip.gif" tppabs="http://www.hcwc.top/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                                    <img src="vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
                                     <div class="dwq">&#x6390;&#x4E1D;&#x73D0;&#x7405;&#x5F69;&#x5D4C;&#x548C;&#x7530;&#x7389;&#x82B1;&#x53E3;&#x8D4F;&#x74F6;</div>
                                         <div class="dwq1">售价：议价</div>
                                 </a>
-                                <a href="Spdetails-ID=200.html" tppabs="http://www.hcwc.top/spzx/Spdetails?ID=200">
+                                <a href="Spdetails-ID=200.html" tppabs="http://www.ruifengwcatr.com/spzx/Spdetails?ID=200">
                                     <img class="xxx" src="bc44069f17294d36bb727c372c3aefef.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-28/bc44069f17294d36bb727c372c3aefef.jpg" alt="">
-                                    <img src="vip.gif" tppabs="http://www.hcwc.top/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                                    <img src="vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
                                     <div class="dwq">&#x54E5;&#x91C9;&#x5927;&#x7897;</div>
                                         <div class="dwq1">售价：议价</div>
                                 </a>
-                                <a href="Spdetails-ID=110.html" tppabs="http://www.hcwc.top/spzx/Spdetails?ID=110">
+                                <a href="Spdetails-ID=110.html" tppabs="http://www.ruifengwcatr.com/spzx/Spdetails?ID=110">
                                     <img class="xxx" src="850f0c2dfe3b4143b0a16d6479345877.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-15/850f0c2dfe3b4143b0a16d6479345877.jpg" alt="">
-                                    <img src="vip.gif" tppabs="http://www.hcwc.top/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                                    <img src="vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
                                     <div class="dwq">&#x54B8;&#x4E30;&#x91CD;&#x5B9D;&#xB7;&#x5F53;&#x767E;</div>
                                         <div class="dwq1">售价：议价</div>
                                 </a>
@@ -479,48 +535,48 @@
         <!-- 合作伙伴 s -->
         <div class="panter w1200">
             <div class="lei">
-                <img src="6-1.png" tppabs="http://www.hcwc.top/r/cms/www/custom/images/6.png" alt="">
+                <img src="6-1.png" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/6.png" alt="">
                 <span>合作伙伴</span>
-                <img src="7-1.png" tppabs="http://www.hcwc.top/r/cms/www/custom/images/7.png" alt="">
+                <img src="7-1.png" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/7.png" alt="">
             </div>
             <div class="happy">
-                <a href="javascript:if(confirm('https://www.baidu.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.baidu.com/'" tppabs="https://www.baidu.com/" target="_blank" onclick="$.get('http://www.hcwc.top/friendlink_view.jspx?id=1')">
-                    <img src="17155546fs57.jpeg" tppabs="http://www.hcwc.top/u/cms/www/201903/17155546fs57.jpeg" alt="百度">
+                <a href="javascript:if(confirm('https://www.baidu.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.baidu.com/'" tppabs="https://www.baidu.com/" target="_blank" onclick="$.get('http://www.ruifengwcatr.com/friendlink_view.jspx?id=1')">
+                    <img src="17155546fs57.jpeg" tppabs="http://www.ruifengwcatr.com/u/cms/www/201903/17155546fs57.jpeg" alt="百度">
                 </a>
-                <a href="javascript:if(confirm('https://www.sina.com.cn/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sina.com.cn/'" tppabs="https://www.sina.com.cn/" target="_blank" onclick="$.get('http://www.hcwc.top/friendlink_view.jspx?id=2')">
-                    <img src="171557338mv8.jpeg" tppabs="http://www.hcwc.top/u/cms/www/201903/171557338mv8.jpeg" alt="新浪微博">
+                <a href="javascript:if(confirm('https://www.sina.com.cn/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.sina.com.cn/'" tppabs="https://www.sina.com.cn/" target="_blank" onclick="$.get('http://www.ruifengwcatr.com/friendlink_view.jspx?id=2')">
+                    <img src="171557338mv8.jpeg" tppabs="http://www.ruifengwcatr.com/u/cms/www/201903/171557338mv8.jpeg" alt="新浪微博">
                 </a>
-                <a href="javascript:if(confirm('https://www.qq.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.qq.com/'" tppabs="https://www.qq.com/" target="_blank" onclick="$.get('http://www.hcwc.top/friendlink_view.jspx?id=3')">
-                    <img src="171559497wov.jpeg" tppabs="http://www.hcwc.top/u/cms/www/201903/171559497wov.jpeg" alt="腾讯网">
+                <a href="javascript:if(confirm('https://www.qq.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.qq.com/'" tppabs="https://www.qq.com/" target="_blank" onclick="$.get('http://www.ruifengwcatr.com/friendlink_view.jspx?id=3')">
+                    <img src="171559497wov.jpeg" tppabs="http://www.ruifengwcatr.com/u/cms/www/201903/171559497wov.jpeg" alt="腾讯网">
                 </a>
-                <a href="javascript:if(confirm('http://www.xlys.org.cn/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.xlys.org.cn/'" tppabs="http://www.xlys.org.cn/" target="_blank" onclick="$.get('http://www.hcwc.top/friendlink_view.jspx?id=4')">
-                    <img src="17160022ocxu.jpeg" tppabs="http://www.hcwc.top/u/cms/www/201903/17160022ocxu.jpeg" alt="西冷印社">
+                <a href="javascript:if(confirm('http://www.xlys.org.cn/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.xlys.org.cn/'" tppabs="http://www.xlys.org.cn/" target="_blank" onclick="$.get('http://www.ruifengwcatr.com/friendlink_view.jspx?id=4')">
+                    <img src="17160022ocxu.jpeg" tppabs="http://www.ruifengwcatr.com/u/cms/www/201903/17160022ocxu.jpeg" alt="西冷印社">
                 </a>
-                <a href="javascript:if(confirm('https://www.so.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.so.com/'" tppabs="https://www.so.com/" target="_blank" onclick="$.get('http://www.hcwc.top/friendlink_view.jspx?id=5')">
-                    <img src="1716012422yk.jpeg" tppabs="http://www.hcwc.top/u/cms/www/201903/1716012422yk.jpeg" alt="5">
+                <a href="javascript:if(confirm('https://www.so.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.so.com/'" tppabs="https://www.so.com/" target="_blank" onclick="$.get('http://www.ruifengwcatr.com/friendlink_view.jspx?id=5')">
+                    <img src="1716012422yk.jpeg" tppabs="http://www.ruifengwcatr.com/u/cms/www/201903/1716012422yk.jpeg" alt="5">
                 </a>
-                <a href="javascript:if(confirm('http://localhost:8080/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://localhost:8080/'" tppabs="http://localhost:8080/" target="_blank" onclick="$.get('http://www.hcwc.top/friendlink_view.jspx?id=6')">
-                    <img src="17160203bh57.jpeg" tppabs="http://www.hcwc.top/u/cms/www/201903/17160203bh57.jpeg" alt="6">
+                <a href="javascript:if(confirm('http://localhost:8080/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://localhost:8080/'" tppabs="http://localhost:8080/" target="_blank" onclick="$.get('http://www.ruifengwcatr.com/friendlink_view.jspx?id=6')">
+                    <img src="17160203bh57.jpeg" tppabs="http://www.ruifengwcatr.com/u/cms/www/201903/17160203bh57.jpeg" alt="6">
                 </a>
             </div>
             <div class="happy" style="margin-top: 10px;">
-                <a href="javascript:if(confirm('https://www.so.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.so.com/'" tppabs="https://www.so.com/" target="_blank" onclick="$.get('http://www.hcwc.top/friendlink_view.jspx?id=7')">
-                    <img src="17160215p4vo.jpeg" tppabs="http://www.hcwc.top/u/cms/www/201903/17160215p4vo.jpeg" alt="7">
+                <a href="javascript:if(confirm('https://www.so.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.so.com/'" tppabs="https://www.so.com/" target="_blank" onclick="$.get('http://www.ruifengwcatr.com/friendlink_view.jspx?id=7')">
+                    <img src="17160215p4vo.jpeg" tppabs="http://www.ruifengwcatr.com/u/cms/www/201903/17160215p4vo.jpeg" alt="7">
                 </a>
-                <a href="javascript:if(confirm('http://www.cang.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.cang.com/'" tppabs="http://www.cang.com/" target="_blank" onclick="$.get('http://www.hcwc.top/friendlink_view.jspx?id=8')">
-                    <img src="17160323dsb0.jpeg" tppabs="http://www.hcwc.top/u/cms/www/201903/17160323dsb0.jpeg" alt="8">
+                <a href="javascript:if(confirm('http://www.cang.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.cang.com/'" tppabs="http://www.cang.com/" target="_blank" onclick="$.get('http://www.ruifengwcatr.com/friendlink_view.jspx?id=8')">
+                    <img src="17160323dsb0.jpeg" tppabs="http://www.ruifengwcatr.com/u/cms/www/201903/17160323dsb0.jpeg" alt="8">
                 </a>
-                <a href="javascript:if(confirm('http://www.artrade.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.artrade.com/'" tppabs="http://www.artrade.com/" target="_blank" onclick="$.get('http://www.hcwc.top/friendlink_view.jspx?id=9')">
-                    <img src="171608296q5k.jpeg" tppabs="http://www.hcwc.top/u/cms/www/201903/171608296q5k.jpeg" alt="嘉德">
+                <a href="javascript:if(confirm('http://www.artrade.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.artrade.com/'" tppabs="http://www.artrade.com/" target="_blank" onclick="$.get('http://www.ruifengwcatr.com/friendlink_view.jspx?id=9')">
+                    <img src="171608296q5k.jpeg" tppabs="http://www.ruifengwcatr.com/u/cms/www/201903/171608296q5k.jpeg" alt="嘉德">
                 </a>
-                <a href="javascript:if(confirm('http://www.gdczpm.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.gdczpm.com/'" tppabs="http://www.gdczpm.com/" target="_blank" onclick="$.get('http://www.hcwc.top/friendlink_view.jspx?id=10')">
-                    <img src="1716093863rr.jpeg" tppabs="http://www.hcwc.top/u/cms/www/201903/1716093863rr.jpeg" alt="荣正">
+                <a href="javascript:if(confirm('http://www.gdczpm.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.gdczpm.com/'" tppabs="http://www.gdczpm.com/" target="_blank" onclick="$.get('http://www.ruifengwcatr.com/friendlink_view.jspx?id=10')">
+                    <img src="1716093863rr.jpeg" tppabs="http://www.ruifengwcatr.com/u/cms/www/201903/1716093863rr.jpeg" alt="荣正">
                 </a>
-                <a href="javascript:if(confirm('https://www.christies.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.christies.com/'" tppabs="https://www.christies.com/" target="_blank" onclick="$.get('http://www.hcwc.top/friendlink_view.jspx?id=11')">
-                    <img src="17161045st90.jpeg" tppabs="http://www.hcwc.top/u/cms/www/201903/17161045st90.jpeg" alt="125">
+                <a href="javascript:if(confirm('https://www.christies.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://www.christies.com/'" tppabs="https://www.christies.com/" target="_blank" onclick="$.get('http://www.ruifengwcatr.com/friendlink_view.jspx?id=11')">
+                    <img src="17161045st90.jpeg" tppabs="http://www.ruifengwcatr.com/u/cms/www/201903/17161045st90.jpeg" alt="125">
                 </a>
-                <a href="javascript:if(confirm('http://www.polypm.com.cn/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.polypm.com.cn/'" tppabs="http://www.polypm.com.cn/" target="_blank" onclick="$.get('http://www.hcwc.top/friendlink_view.jspx?id=12')">
-                    <img src="17161158e1ts.jpeg" tppabs="http://www.hcwc.top/u/cms/www/201903/17161158e1ts.jpeg" alt="10">
+                <a href="javascript:if(confirm('http://www.polypm.com.cn/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.polypm.com.cn/'" tppabs="http://www.polypm.com.cn/" target="_blank" onclick="$.get('http://www.ruifengwcatr.com/friendlink_view.jspx?id=12')">
+                    <img src="17161158e1ts.jpeg" tppabs="http://www.ruifengwcatr.com/u/cms/www/201903/17161158e1ts.jpeg" alt="10">
                 </a>
             </div>
         </div>
@@ -590,10 +646,10 @@
             <div class="w">
                 <p>请广大藏友认真阅读文化部<a href="javascript:if(confirm('http://www.gov.cn/gongbao/content/2016/content_5070760.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.gov.cn/gongbao/content/2016/content_5070760.html'" tppabs="http://www.gov.cn/gongbao/content/2016/content_5070760.html" target="_blank" style="color: white;">《艺术品经营管理办法》</a>,确认未受到工作人员的不实宣传的误导和承诺。</p>
                 <p>网站地图&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相关链接&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;影像授权&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;隐私政策&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;版权声明&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;常见问题&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系我们&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;调查问卷 </p>
-                <p>COPYRIGHT © 2019 瑞丰文藏. ALL RIGHTS RESERVED 鄂ICP备19008904号&nbsp;&nbsp; </p>
+                <p>COPYRIGHT © 2019 瑞丰文藏. ALL RIGHTS RESERVED &nbsp;&nbsp; </p>
             </div>
         </div>
-        <script src="front.js" tppabs="http://www.hcwc.top/r/cms/front.js" type="text/javascript"></script>
+        <script src="front.js" tppabs="http://www.ruifengwcatr.com/r/cms/front.js" type="text/javascript"></script>
         <script type="text/javascript">
             $(function () {
                 var view = parseInt($("#view").text());
@@ -693,7 +749,7 @@
                 }
             });
 
-            $("http://www.hcwc.top/.gui .gui1").bind("mouseenter mouseleave", function (e) {
+            $("http://www.ruifengwcatr.com/.gui .gui1").bind("mouseenter mouseleave", function (e) {
                 var w = $(this).width();
                 var h = $(this).height();
                 var x = (e.pageX - this.offsetLeft - (w / 2)) * (w > h ? (h / w) : 1);
@@ -739,6 +795,7 @@
 
         });</script>
 </head>
+<script src="./js/paomadeng.js"></script>
 </html>
 
 

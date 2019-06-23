@@ -14,7 +14,7 @@
                     h += '</div>';
                     // h += '<div class="controls" style="position: absolute;margin: auto;width: 50px;height: 50px;top: 0;left: 0;bottom: 0;right: 0;">';
                     // h += '<div class="pause" style="width:100%;height:100%;">';
-                    // h += '<img src="play_s.png"/*tpa=http://www.hcwc.top/r/cms/www/custom/r/cms/www/custom/images/play_s.png*/ style="width: 50px!important;height: 50px;">';
+                    // h += '<img src="play_s.png"/*tpa=http://www.ruifengwcatr.com/r/cms/www/custom/r/cms/www/custom/images/play_s.png*/ style="width: 50px!important;height: 50px;">';
                     // h += '</div>';
                     // h += '</div>';
 
@@ -42,12 +42,12 @@
                     var video = e.getElementsByTagName('video')[0];
                     if (video.paused) {
                         $(e).find('.play').hide();
-                        $(e).find('.pause').children('img').prop('src', 'pause_s.png'/*tpa=http://www.hcwc.top/r/cms/www/custom/images/pause_s.png*/);
+                        $(e).find('.pause').children('img').prop('src', 'pause_s.png'/*tpa=http://www.ruifengwcatr.com/r/cms/www/custom/images/pause_s.png*/);
                         video.play();
                         option.whenPlay();
                     } else {
                         $(e).find('.play').show();
-                        $(e).find('.pause').children('img').prop('src', 'play_s-1.png'/*tpa=http://www.hcwc.top/r/cms/www/custom/images/play_s.png*/);
+                        $(e).find('.pause').children('img').prop('src', 'play_s-1.png'/*tpa=http://www.ruifengwcatr.com/r/cms/www/custom/images/play_s.png*/);
                         video.pause();
                     }
                 },
@@ -58,13 +58,13 @@
                     if (video.muted) {
                         video.muted = false;
                         $(e).find('.volume-val').text(parseInt(video.volume * 100));
-                        $(e).find('.sound-btn').children('img').prop('src', 'sound_l.png'/*tpa=http://www.hcwc.top/r/cms/www/custom/images/sound_l.png*/);
+                        $(e).find('.sound-btn').children('img').prop('src', 'sound_l.png'/*tpa=http://www.ruifengwcatr.com/r/cms/www/custom/images/sound_l.png*/);
                         $(e).find('.volume').height(video.volume * totalHeight);
                         $(e).find('.volume-dot').css('top', (1 - video.volume) * totalHeight - 8 + 'px');
                     } else {
                         video.muted = true;
                         $(e).find('.volume-val').text(parseInt(0));
-                        $(e).find('.sound-btn').children('img').prop('src', 'soundoff.png'/*tpa=http://www.hcwc.top/r/cms/www/custom/images/soundoff.png*/);
+                        $(e).find('.sound-btn').children('img').prop('src', 'soundoff.png'/*tpa=http://www.ruifengwcatr.com/r/cms/www/custom/images/soundoff.png*/);
                         $(e).find('.volume').height(0);
                         $(e).find('.volume-dot').css('top', totalHeight - 8 + 'px');
                     }

@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+</head>
+<body>
+<div id="ad-wrapper-box">文字如果超出了宽度自动向左滚动文字如果超出了宽度自动向左滚动。</div>
+<script>
+ 
+	function advertisingDisplay(opation){
+		let op = {
+			wrapper:'#ad-wrapper-box',
+			time:30
+		}
+ 
+		for(let key in opation){
+			if(opation.hasOwnprotype(key)){
+				op[key] = opation[key]
+			}
+		}
+ 
+		// 创建dom
+		this.wrapper = document.querySelector(op.wrapper);
+		this.p = document.createElement('p');
+	    this.p.setAttribute('class','ad-text');
+	    this.p.innerHTML = this.wrapper.innerHTML;
+ 
+		this.inner = document.createElement('div');
+	    this.inner.setAttribute('class','ad-inner');
+	    this.inner.appendChild(this.p);
+ 
+	    this.wrapper.innerHTML = '';
+	    this.wrapper.appendChild(this.inner);
+ 
+	    this.pW = this.p.offsetWidth;
+	    this.wrapperW = this.wrapper.offsetWidth;
+	    // 创建css样式
+	    var styleDom = document.createElement('style');
+	    styleDom.setAttribute('type','text/css');
+	    styleDom.innerHTML = `
+		        *{ margin:0; padding:0;}
+		        body{font:12px/1 '微软雅黑';}
+		        #ad-wrapper-box{font-size: 0.85rem; color: #333; padding-top: 0.75rem; margin: 0 0.75rem; white-space: nowrap; overflow: hidden;width: 300px;}
+		        .ad-inner{ width:1000px;overflow:hidden;}
+		        .ad-inner .ad-text{ display:inline-block;}`;
+	    document.head.appendChild(styleDom)
+	    this.start(); // 启动
+	}
+	advertisingDisplay.prototype = {
+		start(){
+			if(this.wrapperW > this.pW){ return false;}
+	        this.inner.innerHTML+=this.inner.innerHTML;
+	        this.run()
+		},
+		run(){
+	        if(this.pW > this.wrapper.scrollLeft){
+	            let _this = this
+	            this.wrapper.scrollLeft++;
+	            setTimeout(function(){
+	            	_this.run()
+	            },30);
+	        }else{
+	            this.wrapper.scrollLeft=0;
+	        	this.run()
+	        }
+	    }
+	}
+	new advertisingDisplay()
+ 
+</script>
+</body>
+</html>
