@@ -39,7 +39,7 @@
 }
 .header-top-right{
     float: right;
-    width: 250px;
+    width: 300px;
 }
 .header-top-right a{
     float: left !important;
@@ -61,11 +61,18 @@
     padding: 20px 100px; 
     display: flex;
     justify-content: space-around;
-    background: url("../img/centerImg/beijing.png");
+    background: url("../img/centerImg/header-banr.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     border-bottom: 3px solid #d28a10;
 }
 .header-nav-top{
     width: 250px;
+    height: 60px;
+    background: url("../img/centerImg/logo_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 .header-nav-top img{
     float: left;
@@ -109,7 +116,7 @@
     display: inline-block;
     width: 51px;
     height: 35px;
-    background-color: #b08235;
+    background-color: #000;
     margin: 0 !important;
     z-index: 1;
     box-sizing: border-box;
@@ -120,6 +127,7 @@
     /* padding-top: 10px; */
 }
 .header-nav-foot img{
+    height: 50px;
     float: left;
     margin-top: 15px;
 }
@@ -129,4 +137,41 @@
     margin-top: 15px;
     color: #b30608;
     padding-top: 10px;
+}
+.header-nav-foot h4{
+    padding-top: 5px;
+    font-size: 20px !important;
+}
+.header-nav-foot p{
+    margin-bottom: 0 !important;
+}
+.headers{
+    position: relative;
+}
+.headers a{
+    text-decoration:none;
+    color: #428bca;
+}
+.headers a:hover{
+    color: blue;
+}
+.header-foor{
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 500px;
+    height: 40px;
+    margin-left: -250px;
+    line-height: 40px;
+}
+.header-foor a{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    margin: 0 10px;
+    color: #000;
+}
+.header-foor a:hover{
+    color: blue;
 }
