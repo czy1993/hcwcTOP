@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./img/centerImg/logo.ico" type="image/x-icon"/>
+    <title>展销中 - 瑞丰文藏网</title>
+    <meta content="" http-equiv="description">
+    <link href="../bootstrap1.css" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/css/bootstrap1.css" rel="stylesheet">
+    <!--引入公共样式文件--字体图标-->
+    <link rel="stylesheet" href="../base.css" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/css/base.css">
+    <!--引入当前页面的样式文件-->
+ 
+    <link rel="stylesheet" href="../info.css" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/css/info.css">
+    <!-- 轮播图样式 -->
+    <link rel="stylesheet" href="../stylee.css" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/css/stylee.css">
+    <!-- 放大镜样式 -->
+    <link href="../css/swiper.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../jquery.exzoom.css" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/css/jquery.exzoom.css">
+    <link rel="stylesheet" href="../slider.css" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/css/slider.css">
+   <script src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../jquery-ui.js" tppabs="http://www.ruifengwcatr.com/r/cms/jqueryUI/jquery-ui.js" type="text/javascript"></script>
+    <script src="../front.js" tppabs="http://www.ruifengwcatr.com/r/cms/front.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            Cms.checkPerm("", "499");
+            Cms.collectCsi("", "collectCsiDiv", "collect_csi", "499");
+            Cms.attachment("", "499", "0", "attach");
+            Cms.viewCount("", "499");
+        });
+    </script>
+</head>
+<body>
+    <link rel="stylesheet" href="../iconfont.css" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/font_m6tuq8fjihn/iconfont.css">
+    <link type="text/css" rel="stylesheet" href="../common_index.css" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/css/common_index.css">
+    <script type="text/javascript">
+        function qkeypress() {
+            var q = $("input[name=q]");
+            if (q.val().trim() != "") {
+                $("input[name=q]").autocomplete("enable");
+            } else {
+                $("input[name=q]").autocomplete("disable");
+            }
+        }
+        function query() {
+            event.preventDefault();
+            $.ajax({
+                url: "http://www.ruifengwcatr.com/createToken.jspx", async: false, dataType: "json", success: function (data) {
+                    $("#token").val(data.token);
+                }
+            });
+            if ($("#token").val() != null && $("#token").val() != '' && $("input[name='q']").val() != '') {
+                $("#searchForm").submit();
+            }
+        }
+        $(function () {
+            $("input[name='q']").bind('keypress', function (event) {
+                if (event.keyCode == 13) {
+                    event.preventDefault();
+                    query();
+                }
+            });
+        });
+    </script>
+    <div class="hlep_header" style="display: none">
+        <div class="w">
+            <a class="bl_logo" href="../Home.html" tppabs="http://www.ruifengwcatr.com/Home" style="height: 50px;">
+                <img src="../img/centerImg/ruifeng_logo.png" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/r/cms/www/custom/images/img/centerImg/ruifeng_logo.png" alt="" style="height: 50px;">
+            </a>
+            <ul class="bm_ul01">
+                <li><a href="../Home.html" tppabs="http://www.ruifengwcatr.com/Home" class="normalchannel">首页</a></li>
+                <li><a href="../spzx.html" tppabs="http://www.ruifengwcatr.com/spzx" class="normalchannel">环球展厅</a></li>
+                <li><a href="../zxzx.html" tppabs="http://www.ruifengwcatr.com/zxzx" class="normalchannel">展览展销</a></li>
+                <li><a href="../VIP.html" tppabs="http://www.ruifengwcatr.com/VIP" class="normalchannel">VIP专场</a></li>
+                <li><a href="../about.html" tppabs="http://www.ruifengwcatr.com/sczs/about" class="normalchannel">关于我们</a></li>
+            </ul>
+             <ul class="bm_ul02">
+                <!-- <li>
+                    <span class="iconfont icon-dianhua"></span>
+                    <span>027-84887654</span>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="headers">
+        <div class="header-top">
+            <div class="header-top-left">
+                <div>
+                    <img src="../img/centerImg/tz.png" alt="">
+                    <span>重要通知:</span>
+                    
+                </div>
+                <div id="ad-wrapper-box" style="color: #fff">凡需要在本平台进行展览推广的藏品，本平台免费提供资深专家鉴定，鉴定结果符合本平台服务要求的藏品才能进行展览推广服务。</div>
+            </div>
+            <div class="header-top-right">
+                <a href="#">请登录</a>
+                <i>|</i>
+                <a href="#">免费注册</a>
+                <span style="margin-left: 10px">分享网站:</span>
+                <img src="../img/centerImg/wechart_1.png" alt="">
+                <img src="../img/centerImg/qq_1.png" alt="">
+                <img src="../img/centerImg/weibo_1.png" alt="">
+            </div>
+        </div>
+        <div class="header-nav">
+            <div class="header-nav-top">
+                <!-- <img src="./img/centerImg/logo_1.png" alt=""> -->
+                <!-- <div>
+                    <h3>瑞丰文藏</h3>
+                    <p>全球艺术品中介服务平台</p>
+                </div> -->
+            </div>
+            <div class="header-nav-center">
+                <div>
+                    
+                    <a href="../zxzx.html">精品欣赏</a>
+                    <a href="../spzx.html">环球展厅</a>
+                    <a href="../Index-id=5.html">新闻资讯</a>
+                </div>
+                <div class="header-nav-sousuo">
+                    <input type="text">
+                    <div>
+                        <img src="../img/centerImg/sousuo.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav-foot">
+                <img src="../img/centerImg/phone_1.png" alt="">
+                <div>
+                    <p style="margin-bottom: 0">官方统一热线</p>
+                    <h4>027-59860109 (分机534)</h4>
+                </div>
+            </div>
+        </div>
+        <div class="header-foor">
+                <a href="../Home.html">网站首页</a>
+                <a href="../spzx.html">环球展厅</a>
+                <a href="../zxzx.html">展览展销</a>
+                <a href="../VIP.html">VIP专场</a>
+                <a href="../about.html">关于我们</a>
+        </div>
+    </div>
+    <!--<div class="zj_bz02">-->
+    <!--<div class="w">-->
+    <!--<ul class="bl_lop">-->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!--&lt;!&ndash;<li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<a href="http://www.asblys.com/zlzx/index.jhtml?status=1">展销中</a>&ndash;&gt;-->
+    <!--&lt;!&ndash;<img src="/r/cms/www/custom/images/Chinese knotting.png" alt="" />&ndash;&gt;-->
+    <!--&lt;!&ndash;</li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<a href="http://www.asblys.com/zlzx/index.jhtml?status=2">已成交</a>&ndash;&gt;-->
+    <!--&lt;!&ndash;</li>&ndash;&gt;-->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<script src="/r/cms/www/custom/js/jquery-1.8.3.min.js"></script>-->
+    <script src="../rent_out.js" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/js/rent_out.js"></script><div class="bl_box">
+        <img src="./img/centerImg/4.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/u/cms/www/201903/./img/centerImg/4.jpg" alt="">
+    </div>
+    
+
+
+ 
+
+
+<link rel="stylesheet" href="../info.css" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/css/info.css">
+<!-- 放大镜样式 -->
+<link rel="stylesheet" href="../jquery.exzoom.css" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/css/jquery.exzoom.css">
+<link rel="stylesheet" href="../slider.css" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/css/slider.css">
+<script src="../jquery.js" tppabs="http://www.ruifengwcatr.com/r/cms/jquery.js" type="text/javascript"></script>
+<script src="../jquery-ui.js" tppabs="http://www.ruifengwcatr.com/r/cms/jqueryUI/jquery-ui.js" type="text/javascript"></script>
+<script src="../front.js" tppabs="http://www.ruifengwcatr.com/r/cms/front.js" type="text/javascript"></script>
+
+<script src="../rent_out.js" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/js/rent_out.js"></script>
+<div class="container">
+    <!-- 轮播图 -->
+    <div class="banner">
+
+        <h3>VIP最新置顶产品</h3>
+        <div class="rvc" id="rvc1">
+            <div class="rvc-wrapper">
+                <ul style="width: 3150px;left: 0px;">
+                    <li style="width: 232.5px;margin-left: 30px;">
+                        <a href="../addCount/zxdetails-ID=1-3.html" tppabs="http://www.ruifengwcatr.com/spzx/spdetails?id=26">
+                            <div class="img-wrapper">
+                                <span></span>
+                                <img src="../img/190615/190615-1-03-01.png" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-14/44608fb4b7bb47bb91bd4e25a527d17e.jpg"><img src="../vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                            </div>
+                            <p>青花鱼藻纹折沿盆</p>
+                        </a>
+                    </li>
+                <li style="width: 232.5px;margin-left: 30px;">
+                        <a href="../addCount/zxdetails-ID=1-2.html" tppabs="http://www.ruifengwcatr.com/spzx/spdetails?id=26">
+                            <div class="img-wrapper">
+                                <span></span>
+                                <img src="../img/190615/190615-1-02-01.png" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-14/44608fb4b7bb47bb91bd4e25a527d17e.jpg"><img src="../vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                            </div>
+                            <p>明天启青花出戟觚</p>
+                        </a>
+                    </li>
+                <li style="width: 232.5px;margin-left: 30px;">
+                    <a href="../addCount/zxdetails-ID=1-1.html" tppabs="http://www.ruifengwcatr.com/spzx/spdetails?id=26">
+                        <div class="img-wrapper">
+                            <span></span>
+                            <img src="../img/190615/190615-1-01.png" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-14/44608fb4b7bb47bb91bd4e25a527d17e.jpg"><img src="../vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                        </div>
+                        <p>明代花卉纹花觚</p>
+                    </a>
+                </li>
+                        <li style="width: 232.5px;margin-left: 30px;">
+                            <a href="../addCount/zxdetails-ID=1-1.html" tppabs="http://www.ruifengwcatr.com/spzx/spdetails?id=26">
+                                <div class="img-wrapper">
+                                    <span></span>
+                                    <img src="../img/190615/190615-1-01.png" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-14/44608fb4b7bb47bb91bd4e25a527d17e.jpg"><img src="../vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                                </div>
+                                <p>&#x6C5D;&#x7A91;&#x9E7F;&#x89D2;&#x676F;&#x4E00;&#x5BF9;</p>
+                            </a>
+                        </li>
+                        <li style="width: 232.5px;margin-left: 30px;">
+                            <a href="../spdetails-id=103.html" tppabs="http://www.ruifengwcatr.com/spzx/spdetails?id=103">
+                                <div class="img-wrapper">
+                                    <span></span>
+                                    <img src="../c7c362243ca24ccbbccb84bac060f091.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-16/c7c362243ca24ccbbccb84bac060f091.jpg"><img src="../vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                                </div>
+                                <p>&#x73D0;&#x7405;&#x5F69;&#x82B1;&#x9E1F;&#x5BCC;&#x8D35;&#x83F1;&#x5F62;&#x80C6;&#x74F6;</p>
+                            </a>
+                        </li>
+                        <li style="width: 232.5px;margin-left: 30px;">
+                            <a href="../spdetails-id=107.html" tppabs="http://www.ruifengwcatr.com/spzx/spdetails?id=107">
+                                <div class="img-wrapper">
+                                    <span></span>
+                                    <img src="../30bbe49d97ac4422a18d41e93b1f7dfa.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-15/30bbe49d97ac4422a18d41e93b1f7dfa.jpg"><img src="../vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                                </div>
+                                <p>&#x7EA2;&#x91C9;&#x8F67;&#x9053;&#x6D6E;&#x96D5;&#x5B89;&#x5C45;&#x4E50;&#x4E1A;&#x56FE;&#x63CF;&#x91D1;&#x7389;&#x58F6;&#x6625;&#x74F6;</p>
+                            </a>
+                        </li>
+                        <li style="width: 232.5px;margin-left: 30px;">
+                            <a href="../spdetails-id=96.html" tppabs="http://www.ruifengwcatr.com/spzx/spdetails?id=96">
+                                <div class="img-wrapper">
+                                    <span></span>
+                                    <img src="../45d1548a782c4f9cb9a67c93226ca9d8.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-14/45d1548a782c4f9cb9a67c93226ca9d8.jpg"><img src="../vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP">
+                                </div>
+                                <p>&#x9977;&#x94F6;&#x4E00;&#x4E24;&#x9519;&#x7248;&#x5E01;</p>
+                            </a>
+                        </li>
+                   
+                </ul>
+            </div>
+            <div class="rvc-prv"><img src="../left1.png" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/left1.png"></div>
+            <div class="rvc-next"><img src="../right1.png" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/right1.png"></div>
+        </div>
+    </div>
+    <div class="g-info">
+        <!-- 商城放大镜        -->
+        <!-- <div class="vip"></div> -->
+        <div class="exzoom" id="exzoom">
+            <img src="../vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP1">
+            <!--大图区域-->
+            <div class="vip"></div>
+            <div class="exzoom_img_box">
+                <ul class='exzoom_img_ul'>
+                            <li><img src="../img/190715/190715-4-02-01.png" ></li>
+                            <li><img src="../img/190715/190715-4-02-02.png" ></li>
+                            <li><img src="../img/190715/190715-4-02-03.png" ></li>
+                </ul>
+            </div>
+            <!--缩略图导航-->
+            <div class="exzoom_nav"></div>
+            <!--控制按钮-->
+            <p class="exzoom_btn">
+                <a href="javascript:void(0);" class="exzoom_prev_btn"> &lt; </a>
+                <a href="javascript:void(0);" class="exzoom_next_btn"> &gt; </a>
+            </p>
+        </div>
+        <!-- 倒计时 -->
+        <div class="g-time">
+            <div class="col-xl-5 g-time-block">
+                <h3>清代铜镜</h3>
+                <h6>类别:杂项</h6>
+                <div class="exhibit" id="statusvalue">杂项</div>
+                <div class="date">
+                    <div class="g-font">距离结束:</div>
+                    <div class="layout">
+                        <input type="hidden" id="endTime" value="2020/7/18 0:00:00">
+                        <div id="day" class="active">
+                            <!--  <span>00</span>
+                <p>天</p> -->
+                        </div>
+                        <div id="hour" class="active">
+                            <!-- <span>00</span>
+                <p>时</p> -->
+                        </div>
+                        <div id='min' class="active">
+                            <!-- <span>00</span>
+                <p>分</p> -->
+                        </div>
+                        <div id='sound' class="active">
+                            <!-- <span>00</span>
+                <p>秒</p> -->
+                        </div>
+                    </div>
+                    <div class="RMB">
+                        <p>
+                            委托售价:
+                                <span>议价</span>
+                        </p>
+
+                        <p>交易方式:&#x7EBF;&#x4E0B;&#x4EA4;&#x6613;/&#x4EA4;&#x6362;</p>
+                    </div>
+                    <!-- <a class="Like" onclick="Cms.up('',499,3);">
+                        <span id="ups">302</span>
+                        次围观
+                    </a> -->
+                </div>
+                <div class="wg_sc">
+                        <p><span>283</span>人参与</p>
+                        <p><span>1651 </span>次参观</p>
+                        <p><span>1397 </span>人关注</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="g-inforeader">
+        <div class="g-text">
+            <h2>商品详情</h2>
+        </div>
+        <!-- 表单 -->
+        <table class="table table-bordered">
+            <tr>
+                <td>年代</td>
+                <td>清代风格</td>
+                <td>作者</td>
+                <td>&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <td>规格</td>
+                <td></td>
+                <td>重量</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>保存状态</td>
+                <td>&nbsp;&nbsp;&#x826F;&#x597D;</td>
+                <td>来源</td>
+                <td>&nbsp;&nbsp;</td>
+            </tr>
+        </table>
+        <div class="txt" style="word-wrap: break-word;word-break: normal;">
+            <h2>藏品描述展示</h2>
+            <p style="text-indent: 15px">
+                <span style="font-family:宋体;color:rgb(12,12,12);font-size:14px;">
+                    <span style="font-family:宋体">
+                        铜镜是古代精美的艺术品，年代久远，有近四千年历史，比铜钱使用时间还久，最早发现于殷商、西周时期，历经春秋战国秦汉唐宋元明清，后被玻璃镜取代。保存下来完整精美的极少，具有不可再生性。现代人收藏铜镜主要是欣赏铜镜背面精美的纹饰图案和铭文，它反映了一定的时代特征和风格，随时代发展而衍变。镜背面积虽小，却内涵丰富，凝聚了艺术的精华。集中反映着当时的政治、经济、文化和社会生活与时代艺术风尚，为后世人们判断朝代，研究古代社会提供了依据。
+                    </span>
+                </span>
+            </p>
+            <p style="text-indent: 15px">
+                <span style="font-family: 宋体;font-size: 15px;">
+                    Copper mirrors are ancient exquisite artworks. They are old and have a history of nearly 4,000 years. They are longer than the use of copper coins. They were first discovered in the Shang Dynasty and the Western Zhou Dynasty. They passed through the Spring, Autumn, Han, Qin, Song, Yuan, Ming and Qing dynasties and were later replaced by glass mirrors. Very few beautifully preserved, with non-renewable. Modern people collect copper mirrors mainly to appreciate the exquisite patterns and inscriptions on the back of the bronze mirrors. It reflects certain characteristics and styles of the times and evolves with the development of the times. Although the area of the mirror back is small, it is rich in connotation and condenses the essence of art. The focus reflects the political, economic, cultural, and social life at that time and the art and fashion of the times. It provides a basis for future generations to judge the dynasty and study ancient society.
+                </span>
+            </p>
+            <p><br/></p>
+        </div>
+        <!-- 列表 -->
+        <div class="g-listinfo">
+            <div class="g-Tips">
+                <h2>收藏鉴定小贴士</h2>
+            </div>
+            <div class="g-tips-teb">
+                <p>收藏品鉴定四字诀: 看 / 听 / 比 / 试</p>
+            </div>
+            <ul>
+                <li><span>看</span><p>就是要将瓷器上下内外细细观察一遍。一看瓷器釉面是否光洁润滑，有无擦伤、小孔、黑点和气泡；二看形状是否规整，有无变形；三看画面有无损缺；四看底部是否平整，须放置平稳，无毛刺。</p></li>
+                <li><span>听</span><p>就是听轻轻弹叩瓷器时发出的声音。如声音清脆、悦耳，则说明瓷胎细致密实，无裂损，在高温烧成时，瓷化完全。如声音喑哑，就可断定瓷胎有裂损，或者瓷化不完全，这类瓷器经冷热变化，易开裂。</p></li>
+                <li><span>比</span><p>就是比较。对配套瓷器，要比较各配件，看其造型及画面装饰是否协调一致。尤其是成套的青花或青花玲珑瓷，因为青花呈色随烧成温度不同而发生变化，所以同是青花瓷，颜色有深有浅，一套几件乃至数十件的成套冷瓷器，如各件青花呈色有明显差异，这套瓷器就大为逊色了。</p></li>
+                <li><span>试</span><p>就是试盖、试装、试验。有的瓷器带盖子，有的瓷器由几个元件组合而成，在挑选瓷器时，别忘了将盖子试盖一下，将元件试组装一下，看看是否合适。另外，有的瓷器具有特殊功能，如滴水观音，能自动滴水；九龙公道杯，酒斟满到某一位置，会全部漏光。所以要试验一下，看其功能是否正常。</p></li>
+            </ul>
+            <div class="g-tips-teb">
+                <p>注意</p>
+            </div>
+             <p>1.请文明上网，遵守中华人民共和国相关法律法规;</p>
+            <p>2.因您的个人行为直接或间接导致的民事或刑事法律责任，相应后果由您承担;</p>
+            <p>3.瑞丰文藏管理员有权删除含有不良信息的内容;</p>
+            <p>4.因您的不良行为导致不良后果的，瑞丰文藏管理员有权冻结、封闭帐号甚至封闭IP地址;</p>
+            <p>5.您在本平台发布的一切内容，平台有权引用和转载。</p>
+        </div>
+    </div>
+    <!-- 边  轮播 -->
+    <div class="g-side">
+        <h5>热销藏品</h5>
+        <div class="box-slider" id="dowebok">
+            <a href="#" class="box-slider-seta-up">
+                <i class="glyphicon glyphicon-menu-up"></i>
+                <img style="width: 32px; margin-top: -4px;" src="../top_jt.png" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/top_jt.png">
+            </a>
+            <div class="box-slider-content">
+                <div class="box-slider-move">
+
+                        <li>
+                            <a href="../spdetails-id=103.html" tppabs="http://www.ruifengwcatr.com/spzx/spdetails?id=103" class="banner-a">
+                                <span></span>
+                                <img src="../c7c362243ca24ccbbccb84bac060f091.jpg" tppabs="https://hcartwork.oss-cn-hangzhou.aliyuncs.com/2019-04-16/c7c362243ca24ccbbccb84bac060f091.jpg" alt=""><img src="../vip.gif" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/vip.gif" class="bl_VIP2">
+                                <p>&#x73D0;&#x7405;&#x5F69;&#x82B1;&#x9E1F;&#x5BCC;&#x8D35;&#x83F1;&#x5F62;&#x80C6;&#x74F6;</p>
+                            </a>
+                        </li>
+
+                </div>
+            </div>
+            <a href="#" class="box-slider-seta-down ">
+                <i class="glyphicon glyphicon-menu-down"></i>
+                <img style="width: 32px; margin-top: -4px;" src="../bottom_jt.png" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/images/bottom_jt.png">
+            </a>
+        </div>
+    </div>
+</div>
+
+    <link rel="stylesheet" href="../common_info_footer.css" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/css/common_info_footer.css">
+    <div class="bl_footer">
+        <div class="w">
+            <dl>
+                <dt>服务指南</dt>
+                <dd><a href="#" >--</a></dd>
+                <dd><a href="../Index-id=8.html" tppabs="http://www.ruifengwcatr.com/sczs/Index?id=8">发布方式</a></dd>
+                <dd><a href="../Index-id=18.html" tppabs="http://www.ruifengwcatr.com/sczs/Index?id=18">在线发布</a></dd>
+            </dl>
+            <dl>
+                <dt>VIP须知</dt>
+                <dd><a href="#" >--</a></dd>
+                <dd><a href="../Index-id=21.html" tppabs="http://www.ruifengwcatr.com/sczs/Index?id=21">艺术品购买流程</a></dd>
+                <dd><a href="../Index-id=22.html" tppabs="http://www.ruifengwcatr.com/sczs/Index?id=22">买家须知</a></dd>
+                <dd><a href="../Index-id=23.html" tppabs="http://www.ruifengwcatr.com/sczs/Index?id=23">卖家须知</a></dd>
+                <dd><a href="../Index-id=24.html" tppabs="http://www.ruifengwcatr.com/sczs/Index?id=24">线上鉴定须知</a></dd>
+                <dd><a href="../Index-id=25.html" tppabs="http://www.ruifengwcatr.com/sczs/Index?id=25">会员隐私声明</a></dd>
+            </dl>
+            <dl>
+                <dt>物流配送</dt>
+                <dd><a href="#" >--</a></dd>
+                <dd><a href="../Index-id=34.html" tppabs="http://www.ruifengwcatr.com/sczs/Index?id=34">配送常见问题</a></dd>
+                <dd><a href="../Index-id=34.html" tppabs="http://www.ruifengwcatr.com/sczs/Index?id=34">送货上门</a></dd>
+                <dd><a href="../Index-id=34.html" tppabs="http://www.ruifengwcatr.com/sczs/Index?id=34">武装押运</a></dd>
+            </dl>
+            <dl>
+                <dt>帮助中心</dt>
+                <dd><a href="#" >--</a></dd>
+                <dd><a href="../Index-id=35.html" tppabs="http://www.ruifengwcatr.com/sczs/Index?id=35">卖家认证</a></dd>
+                <dd><a href="../Index-id=31.html" tppabs="http://www.ruifengwcatr.com/sczs/Index?id=31">联系客服</a></dd>
+                <dd><a href="../Index-id=32.html" tppabs="http://www.ruifengwcatr.com/sczs/Index?id=32">账户功能</a></dd>
+                <dd><a href="../Index-id=33.html" tppabs="http://www.ruifengwcatr.com/sczs/Index?id=33">查找买品</a></dd>
+            </dl>
+            <!-- <dl>
+                <dt>联系我们</dt>
+                <dd>服务热线：027-84887654</dd>
+                <dd>服务时间：周一到周日 8:00至 23:30</dd>
+                <dd>
+                    <p>公司地址：湖北省武汉市</p>
+                    <p>洪山区唐山商会1栋2303室</p>
+                    <p></p>
+                </dd>
+            </dl> -->
+        </div>
+    </div>
+    <div class="bl_end">
+        <div class="w">
+            <p style="display: none;" id="view">498201</p>
+            <p style="display: none;" id="realview">58851</p>
+            <p>网站访问量<span class="inner" id="pv"></span></p>
+            <p>
+                请广大藏友认真阅读文化部<a href="../javascript:if(confirm('http://www.gov.cn/gongbao/content/2016/content_5070760.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.gov.cn/gongbao/content/2016/content_5070760.html'" tppabs="http://www.gov.cn/gongbao/content/2016/content_5070760.html" target="_blank" style="color: white;">《艺术品经营管理办法》</a>，确认未受到工作人员的不实宣传的误导和承诺。
+            </p><p>
+                COPYRIGHT © 2019 瑞丰文藏. ALL RIGHTS RESERVED 
+                网站建设：<a href="../javascript:if(confirm('http://www.ruanyiit.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.ruanyiit.com/'" tppabs="http://www.ruanyiit.com/" title="信息技术有限公司" target="_blank"></a>
+            </p>
+        </div>
+    </div>
+    <script src="../front.js" tppabs="http://www.ruifengwcatr.com/r/cms/front.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            var view = parseInt($("#view").text());
+            var realview = parseInt($("#realview").text());
+            if (!isNaN(view)) {
+                realview += view;
+            }
+            var pv = ("" + realview).split('');
+            var text = '';
+            for (var i = 0; i < pv.length; i++) {
+                text += "<i>" + pv[i] + "</i>";
+            }
+            $("#pv").append(text);
+            Cms.siteFlow("", location.href, document.referrer, "true");
+        });
+    </script>
+</body>
+<style>
+
+    .bl_footer {
+        margin-top: 0px;
+    }
+
+    .bl_footer, .bl_end p {
+        height: auto;
+    }
+
+    .bl_login p {
+        margin-bottom: 0px;
+    }
+
+    .container .g-info {
+        overflow: visible;
+    }
+
+    .bl_VIP1 {
+        width: 45% !important;
+        position: absolute;
+        height: 21% !important;
+        z-index: 2;
+        float: left;
+        top: -5px;
+        left: -45px;
+    }
+</style>
+<!--<script src="/r/cms/www/custom/js/jquery-2.1.4.min.js"></script>-->
+<script src="../bootstrap.min.js" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/js/bootstrap.min.js"></script>
+<script src="../info.js" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/js/info.js"></script>
+<!-- 轮播图 -->
+<script src="../rvc1.js" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/js/rvc1.js"></script>
+
+
+
+    <script src="../jquery.exzoom.js" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/js/jquery.exzoom.js"></script>
+
+
+<script src="../jquery-boxSlider.js" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/js/jquery-boxSlider.js"></script>
+<script type="text/javascript">
+    $('#rvc1').rvc({
+        liNum: 4,//2~5之间的整数
+        spaceBetween: 30,//li项之间的距离
+        plr: 20,//当屏幕小于1024时，rvc的padding-left，padding-right值
+        time: 400,//动画时间
+        prv: '.rvc-prv',//前一个按钮
+        next: '.rvc-next'//下一个按钮
+
+    })
+    $('#rvc2').rvc({
+        liNum: 3,
+        spaceBetween: 40,
+        plr: 15,
+        time: 200,
+        prv: '.rvc-prv',
+        next: '.rvc-next'
+
+    })
+    $("#exzoom").exzoom({
+        autoPlay: false,
+    });//方法调用，务必在加载完后执行
+    $('#dowebok').boxSlider({
+        orientation: 'vertical',
+    });
+
+</script>
+<script src="../jquery.video.js" tppabs="http://www.ruifengwcatr.com/r/cms/www/custom/js/jquery.video.js"></script>
+<script>
+    $('.createVidio').each(function () {
+        if ($(this).data("src") != undefined && $(this).data("src") != null && $(this).data("src") != "") {
+            $(this).empty();
+            $(this).createVideo({
+                url: $(this).data("src")
+            });
+        }
+    })
+</script>
+<script src="../js/paomadeng.js"></script>
+</html>
